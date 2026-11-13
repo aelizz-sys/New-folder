@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- TODO H1 ✅ [Device mode]: Open Device mode (the phone icon in DevTools). Why is everything tiny? A tag is missing here. (Slide: Mobile-First Indexing) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO H2 ✅ [Eyes]: Look at the browser tab. What does "Home" tell Google about this page? (Slide: Title Tag Best Practices) -->
+    <title>Remi Solano - Concert Photographer in Lubbock, Texas</title>
+    <!-- TODO H3 ✅ [Lighthouse]: Lighthouse SEO says there is no meta description. Google also doesn't know who made the page. (Slide: Essential Meta Tags Summary) -->
+    <meta name="description"
+        content="I'm Remi Solano, a concert photographer and media student at Texas Tech. Since 2023 I've photographed more than 150 shows in Lubbock, from basement shows to festival main stages.">
+    <!-- TODO H4 ✅ [Lighthouse]: Lighthouse SEO: "Page is blocked from indexing". This line hides the whole site from Google. (Slide: Essential Meta Tags Summary) -->
+    <meta name="author" content="Remi Solano">
+    <meta name="robots" content="index, follow">
+    <!-- TODO H5 ✅ [Eyes]: A shared link would show "Home" and no picture. Fix these 2 Open Graph tags (read the og:image warning on the slide) and add the 3 missing ones. (Slides: Essential Open Graph Tags) -->
+    <meta property="og:title" content="Remi Solano - Concert Photographer in Lubbock, Texas">
+    <meta property="og:description"
+        content="I'm Remi Solano, a concert photographer and media student at Texas Tech. Since 2023 I've photographed more than 150 shows in Lubbock, from basement shows to festival main stages.">
+    <meta property="og:image" content="https://www.remi-solano.com/images/og-image.jpg">
+    <meta property="og:url" content="https://remisolano.github.io/">
+    <meta property="og:type" content="website">
+    <!-- TODO H6 ✅ [Eyes]: X (Twitter) reads its own tags first. There are none. (Slide: Twitter Cards) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Remi Solano - Concert Photographer in Lubbock, Texas">
+    <meta property="twitter:description" content="I'm Remi Solano, a concert photographer and media student at Texas Tech. Since 2023 I've photographed more than 150 shows in Lubbock, from basement shows to festival main stages.">
+    <meta property="twitter:image" content="https://www.booked.com/images/og-image.jpg">
+    <!-- TODO H7 ✅ [Lighthouse]: The browser only finds the Google Fonts servers after it reads the next line. Tell it to connect early. (Slide: Preconnect and DNS-Prefetch) -->
+    <!-- TODO H8 ✅ [Network]: Network tab > Font: count the font files. This link asks for 3 families and dozens of styles.
+         Search style.css: which fonts and weights does the page really use? (Slide: Fix #4 - Too Many Font Weights) -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@800&family=Barlow:ital,wght@0,400;1,700&family=Playfair+Display:wght@400;700;900&display=swap"
+        rel="stylesheet">
+    <!-- TODO H9 ✅ [Coverage]: A whole icon library (CSS + an icon font) loads for 3 icons in the footer. Coverage tab: how much of it is red? (Slide: Remove Unused CSS) -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"> -->
+    <!-- TODO H10 ✅ [Lighthouse]: Do H14 and H15 first. Tell the browser to start downloading the hero photo before anything else. (Slide: Preload) -->
+    <link rel="preload" href="images/hero.webp" as="image">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="container navbar">
+            <!-- TODO H11 ✅ [Eyes]: How many <h1> are on this page? The logo is one of them. (Slide: HTML Structure for SEO) -->
+            <a class="logo" href="index.html">
+                <!-- TODO H12 ✅ [Lighthouse]: This image is the home link and it has no alt text. (Slide: Alt Text for SEO) -->
+                <img src="images/logo.svg" alt="Remi Solano home" width="200" height="32">
+            </a>
+
+            <!-- Hamburger menu (the Week 8 checkbox trick): ticked = open. The checkbox sits invisibly ON the icon so the keyboard can reach it. -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Menu">
+            <label for="menu-toggle" class="hamburger" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
+
+            <nav class="nav">
+                <a class="nav-link" href="#work">Work</a>
+                <!-- TODO H13 ✅ [Eyes]: Click every menu link. One goes nowhere. (Slide: Common SEO Mistakes to Avoid) -->
+                <a class="nav-link" href="#journal">Journal</a>
+                <a class="nav-link" href="#rates">Rates</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link nav-book" href="#book">Book a show</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO ========== -->
+        <section class="hero">
+            <!-- TODO H14 ✅ [Squoosh]: Network tab: hero.jpg is 5.2 MB and 5000 px wide. At squoosh.app make a WebP copy, 1600 px wide and under 200 KB,
+                 plus a smaller JPG for old browsers. (Slides: Compression Tools Demo, Fix #1 - Huge Images) -->
+            <!-- TODO H15 ✅ [Lighthouse]: Give browsers the WebP and keep the JPG as a fallback. (Slide: The Picture Element for Fallbacks) -->
+            <!-- TODO H16 ✅ [Lighthouse]: The first photo everyone sees is told to load late. (Slide: When to Lazy Load?) -->
+            <picture>
+                <source srcset="images/hero.webp" type="image/webp">
+                <img class="hero-img" src="images/hero.jpg"
+                    alt="Fans raise their hands toward a stage glowing red at an outdoor concert" width="1600"
+                    height="1066" loading="eager">
+            </picture>
+
+            <div class="viewfinder" aria-hidden="true">
+                <p class="readout">ISO 3200 · 1/250 · F1.8 · [412]</p>
+            </div>
+
+            <div class="hero-content">
+                <div class="container">
+                    <p class="kicker">Remi Solano · Live music photography · Booking spring 2027</p>
+                    <!-- TODO H17 ✅ [Eyes]: Google reads the h1 as the main topic of the page. What would a band type into Google to find Remi?
+                         (Slides: Keywords: The Smart Way, Local SEO) -->
+                    <h1 class="hero-title">Convert photographer in Lubbock, Texas</h1>
+                    <p class="hero-intro">I photograph bands in small clubs, on festival main stages and everywhere in
+                        between. Edited photos land in your inbox within 72 hours.</p>
+                    <div class="hero-actions">
+                        <a class="btn" href="#work">See my work</a>
+                        <a class="btn btn-outline" href="#rates">Rates for bands</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== WORK ========== -->
+        <section class="section" id="work">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">Selected work</h2>
+                    <p class="section-note">Frames 14A–19 · 2026 season</p>
+                </div>
+
+                <!-- TODO H18 ✅ [Network]: Network tab, throttle to Slow 4G, refresh: every photo on the page downloads before you scroll.
+                     Fix every photo below the first screen (gallery, journal, about). (Slide: Native Lazy Loading) -->
+                <div class="gallery">
+                    <figure class="shot shot-featured">
+                        <!-- TODO H19 ✅ [Lighthouse]: A 4000 px photo (3.3 MB) for a box about 800 px wide. A 400, 800 and 1200 px copy are already in images/.
+                             Let each screen pick one. (Slide: Responsive Images with srcset) -->
+                        <!-- TODO H20 ✅ [Lighthouse]: This photo has no alt text. (Slide: Alt Text for SEO) -->
+                        <img srcset="images/festival-lights-400.webp 400w,
+                                    images/festival-lights-800.webp 800w,
+                                    images/festival-lights-1200.webp 1200w" sizes="(max-width: 600px) 100vw, 800px"
+                            src="images/festival-lights-800.webp"
+                            alt="White stage lights cut throught smoke above a festival crowd with raised hands"
+                            width="1200" height="800" loading="lazy">
+                        <span class="select" aria-hidden="true">Select</span>
+                        <figcaption><span class="frame">14A</span> Dust Devil Radio, main stage at Mesa Fest 2026
+                        </figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/red-guitarist.jpg"
+                            alt="A guitarist plays under deep red stage light while a fan films on a phone" width="800"
+                            height="533">
+                        <figcaption><span class="frame">15</span> Hollow Saints at The Rail Yard</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <!-- TODO H21 ✅ [Eyes]: Read this alt text out loud. Which rules from the slide does it break? (Slide: Alt Text for SEO) -->
+                        <img src="images/silhouette.jpg"
+                            alt="Black and white silhouette of a singer walking through stage smoke" width="800"
+                            height="647">
+                        <figcaption><span class="frame">16A</span> Mara Quinn at Basement 806</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <!-- TODO H22 ✅ [Eyes]: Look at this file name. Rename the file in VS Code and fix the src. (Slide: URL Structure Best Practices) -->
+                        <img src="images/crowd-surfer.jpg"
+                            alt="A fan crowd surfs over raised hands in front of a bright stage" width="800"
+                            height="600">
+                        <figcaption><span class="frame">17</span> Static Kids, crowd surfing at Basement 806
+                        </figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/dj.jpg"
+                            alt="A DJ holds a microphone behind his decks under orange and teal light" width="800"
+                            height="533">
+                        <figcaption><span class="frame">18A</span> DJ Low Tide at the Hub City Block Party</figcaption>
+                    </figure>
+                    <figure class="shot">
+                        <img src="images/rock-band.jpg"
+                            alt="A guitarist and a drummer play under pink and purple stage lights" width="800"
+                            height="530">
+                        <figcaption><span class="frame">19</span> The Lariats at Mesa Fest 2026</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== STATS ========== -->
+        <section class="stats" aria-label="Numbers">
+            <!-- TODO H23 ✅ [Eyes]: These 3 numbers are <h2> headings. Are they really section titles? (Slide: HTML Structure for SEO) -->
+            <div class="container stats-grid">
+                <div class="stat">
+                    <span class="stat-number">150+</span>
+                    <p>shows photographed since 2023</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">72 h</span>
+                    <p>from the last song to your finished gallery</p>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">40</span>
+                    <p>edited photos per set, on average</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== JOURNAL ========== -->
+        <section class="section" id="journal">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">Journal</h2>
+                    <p class="section-note">Notes from the photo pit</p>
+                </div>
+
+                <div class="post-grid">
+                    <!-- TODO H24 ✅ [Eyes]: Each post is a plain <div> and each date is plain text. Use the elements that say "this is a post" and "this is a date". (Slide: Semantic HTML and SEO) -->
+                    <article class="post">
+                        <!-- TODO H25 ✅ [Lighthouse]: These 3 photos have no width and height, so the text jumps down when they load. (Slide: Fix #5 - Layout Shift) -->
+                        <img src="images/camera-bracelets.jpg"
+                            alt="A hand holds a Canon camera, wrist covered in festival wristbands" width="900"
+                            height="600" loading="lazy">
+                        <p class="post-date"><time datetime="2026-10-12">Oct 12, 2026</time></p>
+                        <!-- TODO H26 ✅ [Lighthouse]: The post titles skip a heading level. Fix all 3. (Slide: HTML Structure for SEO) -->
+                        <h3 class="post-title">What's in my bag for a three-band night</h3>
+                        <p>Two cameras, three lenses, earplugs and more batteries than I need. Here's the kit I bring to
+                            every show, and why.</p>
+                        <!-- TODO H27 ✅ [Eyes]: "Read more"... about what? Fix all 3. Lighthouse won't warn you: it skips links to # on the same page. (Slide: Internal Linking Strategy) -->
+                        <a class="post-link" href="#journal">Read what's in my bag</a>
+                    </article>
+                    <article class="post">
+                        <img src="images/editing.jpg" alt="A photographer edits on a laptop on a rooftop at sunset"
+                            width="900" height="600" loading="lazy">
+                        <p class="post-date"><time datetime="2026-09-28">Sep 28, 2026</time></p>
+                        <h3 class="post-title">From 900 shots to 40: my overnight edit</h3>
+                        <p>Bands want photos the next morning. This is how I pick the best frames and edit them before
+                            breakfast.</p>
+                        <a class="post-link" href="#journal">Read my editing routine</a>
+                    </article>
+                    <article class="post">
+                        <img src="images/spotlight.jpg" alt="A single spotlight shines on a guitarist on a dark stage"
+                            width="900" height="600" loading="lazy">
+                        <p class="post-date"><time datetime="2026-09-03">Sep 3, 2026</time></p>
+                        <h3 class="post-title">Shooting in a dark venue with no flash</h3>
+                        <p>Most clubs don't allow flash. These are the camera settings that keep faces sharp in low
+                            light.</p>
+                        <a class="post-link" href="#journal">Read the low-light settings</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== RATES ========== -->
+        <section class="section rates-section" id="rates">
+            <div class="container">
+                <div class="section-head">
+                    <h2 class="section-title">Rates for bands</h2>
+                    <p class="section-note">Lubbock and West Texas</p>
+                </div>
+                <ul class="rates">
+                    <li class="rate">
+                        <h3 class="rate-name">Live set</h3>
+                        <p class="rate-desc">One set, 30 edited photos, online gallery within 72 hours.</p>
+                        <p class="rate-price">$150</p>
+                    </li>
+                    <li class="rate">
+                        <h3 class="rate-name">Full night</h3>
+                        <p class="rate-desc">Doors to encore, every band on the bill, 80 edited photos.</p>
+                        <p class="rate-price">$280</p>
+                    </li>
+                    <li class="rate">
+                        <h3 class="rate-name">Promo shoot</h3>
+                        <p class="rate-desc">Two hours on location for posters, Spotify and press photos.</p>
+                        <p class="rate-price">$220</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <figure class="about-photo">
+                    <!-- TODO H28 ✅ [Squoosh]: This photo is a 2.5 MB PNG. Which format is for photos? Fix it the same way as the hero (H14, H15).
+                         (Slide: Image Compression Explained) -->
+                    <!-- TODO H29 ✅ [Lighthouse]: This photo has no width and height either. (Slide: Fix #5 - Layout Shift) -->
+                    <img class="portrait" src="images/portrait.webp"
+                        alt="Remi Solano looking through a camera lens straight at the viewer" width="750" height="1000"
+                        loading="lazy">
+                    <figcaption><span class="frame">01</span> Remi at work</figcaption>
+                </figure>
+
+                <!-- TODO H30 ✅ [Elements]: Open the Elements tab. How many divs wrap this text? (Slide: HTML Optimization - Keep It Flat) -->
+                <div class="about-text">
+                    <h2 class="section-title">About Remi</h2>
+                    <p>I'm Remi Solano, a concert photographer and media student at Texas Tech. Since 2023 I've
+                        photographed more than 150 shows in Lubbock, from basement shows to festival main stages.</p>
+                    <p>I work fast, stay out of the crowd's way, and send edited photos within three days, sized for
+                        Instagram, Spotify and the press.</p>
+                    <!-- TODO H31 ✅ [Eyes]: Select the whole page (Cmd+A / Ctrl+A) and look under this text. Who is that text for? (Slide: Common SEO Mistakes to Avoid) -->
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== BOOKING ========== -->
+        <section class="booking" id="book">
+            <div class="container">
+                <div class="booking-box">
+                    <h2 class="booking-title">Got a show coming up?</h2>
+                    <p>Send me the date, the venue and your set time. I answer every message within a day.</p>
+                    <!-- TODO H32 ✅ [Eyes]: "Click here" says nothing about where the link goes, and Lighthouse skips email links. (Slide: Internal Linking Strategy) -->
+                    <a class="btn" href="mailto:booking@example.com">Email Remi to book a show</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="footer-mark">Remi Solano</p>
+            <div class="footer-cols">
+                <div>
+                    <p class="footer-heading">Pages</p>
+                    <ul class="footer-list">
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#journal">Journal</a></li>
+                        <li><a href="#rates">Rates</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#book">Book a show</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-heading">Find me</p>
+                    <!-- TODO H33 ✅ [Lighthouse]: Do H9 first: without the library these icons disappear. What would a screen reader say for an icon? (Slide: Remove Unused CSS) -->
+                    <ul class="footer-list">
+                        <li><a href="https://www.instagram.com/">Instagram</a></li>
+                        <li><a href="https://www.tiktok.com/">TikTok</a></li>
+                        <li><a href="https://www.youtube.com/">YouTube</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <p class="footer-heading">Based in</p>
+                    <!-- TODO H34 ✅ [Eyes]: Bands search "photographer + city". The footer is on every page: does it say where Remi works? (Slide: Local SEO) -->
+                    <p>Lubbock, Texas. Shooting shows across West Texas and anywhere a van van get to.</p>
+                </div>
+            </div>
+            <p class="credits">Photos (CC0, Unsplash) by Arkady Lifshits, Daniel Robert, Sergio Alejandro Ortiz, Axel
+                Antas-Bergkvist, lifesimply.rocks, Søren Astrup Jørgensen, Michael Mongin, Justin Main, Avi Richards,
+                Linda Xu, Joseph Chan and Melanie van Leeuwen. Remi Solano is a made-up photographer for Introduction to
+                Web Design.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

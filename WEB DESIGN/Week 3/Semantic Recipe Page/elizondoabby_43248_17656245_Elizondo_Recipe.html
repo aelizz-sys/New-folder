@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NICE WORK: DOCTYPE, lang="en", charset and viewport are all correct.
+         TIP: The <title> is still the placeholder. It is what shows in the browser tab, so give it the real name: <title>Banana Milk Matcha Latte Recipe</title> -->
+    <title>Recipe Name</title>
+</head>
+<body>
+    <!--Site Header-->
+    <!-- NICE WORK: <header> used correctly for the top of the page. -->
+    <header class="site-header">
+        <a href="#" class="logo">Yoko's Kitchen</a>
+        <!-- NICE WORK: This is the best use of <nav> I have seen in this batch. A real navigation block, holding an actual link, with descriptive link text and rel="noopener noreferrer" on a target="_blank" link. That last part is a genuinely good habit and I did not expect it yet. -->
+        <nav class="site-nav">
+            <ul class="nav-list">
+                <li><a href="https://yokoskitchen.com/banana-matcha-latte/" target="_blank" rel="noopener noreferrer">Check out the recipe on Yoko's Kitchen &rarr; </a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <!-- Site Main Sections -->
+
+    <!-- IMPORTANT: This is a closing </main> tag, but <main> was never opened. There is a second </main> further down on line 89 too, so the page has two closing tags and no opening one.
+         FIX: change this line to the opening tag and keep the closing one at the bottom:
+         <main> -->
+    </main>
+        <section id="recipe-heading">
+
+        <!-- IMPORTANT: This line got scrambled during editing. It is a closing </div> with leftover attributes hanging off it, which the browser cannot read at all.
+             FIX: it was meant to be an opening tag, so replace the whole line with:
+             <div class="wrap recipe-heading-inner"> -->
+        </div> class="wrap recipe heading-inner">
+                <div class="recipe heading-copy">
+            <!-- NICE WORK: Exactly one <h1> on the page and it names the recipe. -->
+            <h1 id="recipe-title" class="recipe heading-title display">
+                Banana Milk Matcha Latte Recipe
+            </h1>
+            <!-- NICE WORK: This is genuinely good intro writing, and it is a real <p> tag doing the job. Best written page in the batch.
+                 MISSING: The one thing I wanted here was <strong> or <em> used at least once. An easy add:
+                 <p>This Banana Milk Matcha Latte is a <strong>creamy, naturally sweet</strong> matcha drink...</p> -->
+            <p class="recipe heading-description">
+                This Banana Milk Matcha Latte is a creamy, naturally sweet matcha drink made with homemade banana milk.
+                The combination of earthy Japanese matcha and ripe bananas creates a smooth, energizing drink that's perfect for breakfast or an afternoon pick-me-up.</p>
+            <!-- TIP: This <p> is opened but never closed and has nothing inside it. Safe to just delete this line. -->
+            <p>
+
+        </div>
+        <div class="recipe heading-image">
+                <!-- BONUS: I gave you extra credit for this. We do not cover images until next week and you added one anyway, which I like, but the alt text is the real reason. It describes what is actually in the picture instead of saying "image" or "photo". That is exactly what a screen reader user hears, and plenty of working developers still get it wrong years in.
+                     TIP: The .webp file is not in your folder, so this one will show as broken for now. Nothing lost, just so you know why. When you submit images next week, remember the picture has to travel with the HTML file. -->
+                <img src="Banana-Matcha-Latte.webp"
+                    alt="Still from Yoko's Kitchen, shot of the final product of the Banana Matcha Latte recipe">
+                <!-- TIP: <width> and <height> are not real HTML tags. Size is set with attributes inside the <img> tag itself, like this:
+                     <img src="Banana-Matcha-Latte.webp" alt="..." width="400" height="300">
+                     Then you can delete this line entirely. -->
+                    <width="400"></width><height="300"></height>
+                <p>Yoko's Kitchen &mdash; Banana Matcha Latte Recipe, January 2024</p>
+            </div>
+        </div>
+    </section>
+    <section id="recipe-steps">
+        <div class="wrap recipe-steps-inner">
+            <div class="recipe-steps-copy">
+                <!-- NICE WORK: A proper <h2> under your <h1>, no skipped levels. -->
+                <h2 class="recipe-steps-title display" id="recipe-steps-title">
+                    How to Make the Banana Milk Matcha Latte
+                </h2>
+                <!-- TIP: A list cannot live inside a paragraph. A <p> is for a block of sentences, an <ol> is a block of its own, so one can never sit inside the other.
+                     FIX: delete this <p> tag and its closing </p> on line 64, and let the <ol> stand on its own. -->
+                <p class="recipe-steps-text">
+                    <!-- NICE WORK: <ol> is the right list for steps since order matters here. -->
+                    <ol>
+                        <li>Make the Banana Milk: In a blender, combine the banana and oat milk and blend until smooth.
+                            If you're using optional ingredients like salt, vanilla, or cinnamon, add them here and blend together.
+                            I like a powerful blender like a Vitamix or Ninja blender.</li>
+                        <!-- TIP: This <li> and the three below it are never closed. The browser guesses, but it will not always guess right.
+                             Every <li> needs its own </li> at the end. You also have <br> tags doing the job that closing the <li> should do, so those can go. -->
+                        <li>Prepare the Matcha: Soak a whisk before use to soften the bristles. While soaking, use a fine mesh sifter
+                            to sift the matcha powder into a matcha bowl. If you don't have a matcha bowl, you can use a small mixing bowl or soup bowl.
+                            Matcha powder can be clumpy due to static electricity, so sifting is really important to make a smooth matcha.<br>
+                        <li>Pour the hot water into the matcha powder. The best temperature to make matcha is 70-80°C (158-176°F). Hot water
+                        makes matcha bitter. If your kettle has temperature control, it works amazingly! If not, use the traditional Yusumashi method:
+                        boil the filtered water and pour it into a cup to cool a bit. Then add it to the matcha powder.<br>
+                        <li>Vigorously whisk matcha with a bamboo whisk, moving in an M or W shape until thoroughly whisked and a foam forms on the surface.
+                        If you don't have a bamboo whisk, I have a post sharing how to make matcha without a whisk!<br>
+                        <li>Assemble the latte: fill a glass with ice cubes and pour banana milk over it. Top with freshly whisked matcha with the foam on top.
+                        Mix well and enjoy!<br>
+                    </ol>
+                </p>
+            </div>
+            <!-- IMPORTANT: <dt> means "definition term" and it only works inside a <dl> definition list. Here it is being used as a general container, three of them nested, which the browser will not understand.
+                 FIX: these three <dt> tags should be a <section> and two <div> tags, and their closing tags on lines 86 and 87 change to match:
+                 <section id="recipe-ingredients">
+                     <div class="wrap recipe-ingredients-inner">
+                         <div class="recipe-ingredients-copy"> -->
+            <dt id="recipe-ingredients">
+                <dt class="wrap recipe-ingredients-inner">
+                    <dt class="recipe-ingredients-copy">
+                        <!-- TIP: Heading levels are fine here, h1 to h2 to h3, nothing skipped. Since Ingredients is really its own top level section rather than a subsection of the steps, <h2> would fit it even better. -->
+                        <h3 class="recipe-ingredients-title display"
+                            id="recipe-ingredients-title">
+                            Ingredients for the Banana Milk Matcha Latte
+                        </h3>
+                        <!-- IMPORTANT: This is the main thing that cost points in this section, and once you see it you will never do it again.
+                             <ul> is the box, <li> are the things inside the box. Right now the <ul> tags are being used as labels with text in them, and all your <li> items are sitting outside the box.
+
+                             So this:
+                                 <ul>For the Matcha Banana Milk Latte:</ul>
+                                 <li>1 ripe, spotty banana.</li>
+
+                             Should be this, with the label as a heading and the items wrapped inside the <ul>:
+                                 <h4>For the Matcha Banana Milk Latte</h4>
+                                 <ul>
+                                     <li>1 ripe, spotty banana.</li>
+                                     <li>1 cup oat milk (or any plant-based milk).</li>
+                                     <li>2 teaspoons of matcha (Yoko recommends Ceremonial Matcha).</li>
+                                     <li>1/4 cup hot water 70-80°C (158-176°F).</li>
+                                     <li>Ice Cubes.</li>
+                                 </ul>
+
+                                 <h4>Optional Additions</h4>
+                                 <ul>
+                                     <li>A pinch of salt.</li>
+                                     <li>A dash of cinnamon.</li>
+                                     <li>1/2 teaspoon vanilla extract/paste.</li>
+                                 </ul>
+
+                             Splitting it into two lists like that is the right instinct, you just need the <li> items inside the <ul> instead of after it. Also, same as above, the <p> tag cannot hold a list, so it can go. -->
+                        <p class="recipe-ingredients-text">
+                            <ul>For the Matcha Banana Milk Latte:</ul>
+                                <li>1 ripe, spotty banana.</li>
+                                <li>1 cup oat milk (or any plant-based milk).</li>
+                                <li>2 teaspoons of matcha (Yoko recommends Ceremonial Matcha).</li>
+                                <li>1/4 cup hot water 70-80°C (158-176°F).</li>
+                                <li>Ice Cubes.</li>
+                            <ul>Optional Additions:</ul>
+                                <li>A pinch of salt.</li>
+                                <li>A dash of cinnamon.</li>
+                                <li>1/2 teaspoon vanilla extract/paste.</li>
+                            </ul>
+                        </p>
+                    </dt>
+                </dt>
+
+    <!-- TIP: The <section id="recipe-steps"> and its two <div> tags opened above are never closed. Before this </main> you need:
+         </div>
+         </div>
+         </section> -->
+    </main>
+    <!-- Site Footer -->
+    <!-- NICE WORK: A real <footer> with a proper <p> inside it, and you credited the source. Exactly what I wanted to see. -->
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2024 Yoko's Kitchen. All rights reserved.</p>
+        </div>
+    <!-- TIP: </footer> is missing. Add it right here, before </body>, so the footer closes properly. -->
+</body>
+
+</html>
+
+<!--
+===============================================================================================
+ GRADING (2 points)
+===============================================================================================
+
+ +---------------------+--------+--------+----------------------------------------------------+
+ | Criteria            | Points | Earned | What You Did                                       |
+ +---------------------+--------+--------+----------------------------------------------------+
+ | HTML Structure      |  0.5   |  0.3   | ✓ DOCTYPE, lang="en", charset and viewport correct |
+ |                     |        |        | ✓ Head and body are in the right places            |
+ |                     |        |        | ✗ <title> left as the "Recipe Name" placeholder    |
+ |                     |        |        | ✗ Two closing </main> tags, none opening it        |
+ |                     |        |        | ✗ Scrambled </div> line with attributes attached   |
+ |                     |        |        | ✗ </footer>, </section> and two </div> missing     |
+ |                     |        |        | ✗ <width> and <height> are not real HTML tags      |
+ +---------------------+--------+--------+----------------------------------------------------+
+ | Semantic Elements   |  0.6   |  0.6   | ✓ <header> used correctly                          |
+ |                     |        |        | ✓ <nav> holding a real link, best use in the batch |
+ |                     |        |        | ✓ <section> used correctly, twice                  |
+ |                     |        |        | ✓ <footer> used correctly                          |
+ |                     |        |        | ✗ <main> never actually opens, so 4 elements not 5 |
+ |                     |        |        | ✗ <dt> used as a container, it only works in a <dl>|
+ +---------------------+--------+--------+----------------------------------------------------+
+ | Content & Lists     |  0.6   |  0.5   | ✓ Exactly one <h1>, and it names the recipe        |
+ |                     |        |        | ✓ Correct h1 to h2 to h3, no skipped levels        |
+ |                     |        |        | ✓ <ol> for the steps, with real content in each    |
+ |                     |        |        | ✓ Strong <p> paragraphs, best writing in the batch |
+ |                     |        |        | ✓ Working link with descriptive text               |
+ |                     |        |        | ✗ Ingredient <li> items sit outside the <ul>       |
+ |                     |        |        | ✗ Four <li> tags never closed                      |
+ |                     |        |        | ✗ No <strong> or <em> used                         |
+ +---------------------+--------+--------+----------------------------------------------------+
+ | Code Quality        |  0.3   |  0.2   | ✓ Clear, thoughtful class and id names throughout  |
+ |                     |        |        | ✓ Helpful comments marking your own sections       |
+ |                     |        |        | ✗ Would not pass validator.w3.org, many unclosed   |
+ |                     |        |        |   and mismatched tags                              |
+ |                     |        |        | ✗ Lists nested inside <p> tags, which is not legal |
+ |                     |        |        | ✗ Indentation drifts, hard to see what closes what |
+ +---------------------+--------+--------+----------------------------------------------------+
+ | BONUS               |   --   |  +0.2  | ✓ Added an image a full week before.               |
+ |                     |        |        | ✓ Reached for width and height attributes on       |
+ |                     |        |        |   your own initiative                              |
+ +---------------------+--------+--------+----------------------------------------------------+
+ | TOTAL               |  2.0   |  1.8   |                                                    |
+ +---------------------+--------+--------+----------------------------------------------------+
+
+===============================================================================================
+-->

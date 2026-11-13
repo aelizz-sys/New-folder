@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<!-- TODO H1 [WAVE]: The page doesn't say which language it is written in. -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- TODO H2 [Lighthouse]: Something in this line stops people from zooming in on their phone. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- TODO H3 [Eyes]: Look at the browser tab. Does "Document" tell anyone what this page is? -->
+    <title>First / Student Film & Media Festival</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,800&family=Atkinson+Hyperlegible+Next:wght@400;700&family=IBM+Plex+Mono:wght@500&family=Permanent+Marker&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TODO H4 [Keyboard]: Keyboard users must Tab through the whole menu on every visit. Add a skip link here. (Slide: Skip Links) -->
+    <a href="#main" class="skip-link">Skip to main content</a>
+    <div class="bars"></div>
+
+    <!-- TODO H5 [WAVE]: This div is the page header, and the div inside it is the navigation. Use the right elements. (Slide: Semantic Structure) -->
+    <header class="site-header">
+        <div class="container navbar">
+            <a class="logo" href="index.html">
+                <!-- TODO H6 [WAVE]: This image is a link, and it has no alt text. (Slide: Image Alt Text Rules, Rule #3) -->
+                <img src="images/logo.svg" width="200" height="40" alt="Image of a film production set with light">
+            </a>
+            <div class="nav">
+                <!-- TODO H7 [Eyes]: Will everyone understand these words? Use clear, literal labels. (Slide: Autism-Friendly Interfaces) -->
+                <a class="nav-link" href="#program">Programs</a>
+                <a class="nav-link" href="#access">Access</a>
+                <a class="nav-link" href="#submit">Submit</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- TODO H8 [WAVE]: This div holds the main content. Use the right element, and give it the id your skip link jumps to. -->
+    <main class="main" id="main">--
+    </main>
+
+        <!-- ========== HERO ========== -->
+        <section class="hero">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <p class="eyebrow">Student Film &amp; Media Festival · Dec 3–5, 2026 · Harmon Hall Cinema</p>
+                    <!-- TODO H9 [WAVE]: This looks like the main heading of the page, but it isn't one. -->
+                    <h1 class="hero-title">Your first film deserves a big screen.</h1>
+                    <!-- TODO H10 [Eyes]: Read this out loud. Rewrite it in plain language. (Slide: The Power of Plain Language) -->
+                    <p class="hero-intro"> Rewrite to be less condensed and easier to read </p>
+                    <!-- TODO H11 [Eyes, Lighthouse]: Four buttons fight for attention, "Click here" says nothing, and one button jumps the Tab order.
+                         Keep ONE clear main action. (Slides: Visual Hierarchy, Descriptive Links, Tab Order) -->
+                    <div class="hero-actions">
+                        <a class="button" href="#submit">Submit your film</a>
+                        <a href="#program">See the program</a>
+                    </div>
+                </div>
+
+                <div class="slate" aria-hidden="true">
+                    <div class="slate-sticks"></div>
+                    <div class="slate-board">
+                        <p class="slate-cell slate-wide"><span class="slate-label">Prod.</span> <span class="slate-value">First Cut 2026</span></p>
+                        <p class="slate-cell"><span class="slate-label">Roll</span> <span class="slate-value">04</span></p>
+                        <p class="slate-cell"><span class="slate-label">Scene</span> <span class="slate-value">Harmon Hall</span></p>
+                        <p class="slate-cell"><span class="slate-label">Take</span> <span class="slate-value">Dec 3–5</span></p>
+                        <p class="slate-cell slate-wide"><span class="slate-label">Director</span> <span class="slate-value">You?</span></p>
+                        <p class="rec"><span class="rec-dot"></span> REC</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TODO H12 [Eyes]: Read this alt text. What two things are wrong with it? (Slide: Alt Text Example) -->
+            <img class="hero-img" src="images/hero-cinema.jpg" alt="an audience in a classic red cinema, facing a bright screen" width="1600" height="800">
+        </section>
+
+        <!-- ========== PROGRAM ========== -->
+        <section class="section" id="program">
+            <div class="container">
+                <!-- TODO H13 [WAVE]: The headings in this section skip levels. Fix this title and the 3 card titles. (Slide: Heading Hierarchy) -->
+                <h2 class="section-title">Three nights on the big screen</h2>
+                <p class="section-intro">Each color is a format: pink = short film, yellow = podcast, blue = vertical video.</p>
+
+                <div class="card-grid">
+                    <article class="card">
+                        <!-- TODO H14 [WAVE]: This photo has no alt text. -->
+                        <img class="card-img" src="images/card-film-set.jpg" width="800" height="600">
+                        <div class="card-body">
+                            <p class="card-time"><time datetime="2026-12-03T19:00">Thu, Dec 3 · 7:00 PM</time></p>
+                            <h3 class="card-title">Opening night: shorts</h3>
+                            <!-- TODO H15 [DevTools]: The format is shown with COLOR ONLY. Test: Rendering tab > Emulate vision deficiencies > Achromatopsia.
+                                 Fix all 3 cards, and the color sentence under the section title. (Slide: Don't use color alone) -->                            <p>Twelve short films, all under 15 minutes. The directors answer questions after.</p>
+                            <!-- TODO H16 [WAVE]: "Read more" about what? Fix all 3 cards. (Slide: Descriptive Links) -->
+                            <a class="card-link" href="#submit">Read more about opening night shorts</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <!-- TODO H17 [WAVE]: Is "image" a useful description? -->
+                        <img class="card-img" src="images/card-podcast.jpg" alt="A stadium microphone in a booth" width="800" height="600">
+                        <div class="card-body">
+                            <p class="card-time"><time datetime="2026-12-04T19:00">Fri, Dec 4 · 7:00 PM</time></p>
+                            <h3 class="card-title">Podcast live</h3>                            <p>Three student podcasts record an episode on stage. A printed transcript waits on every seat.</p>
+                            <a class="card-link" href="#submit">Read more about live podcasts</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <!-- TODO H18 [WAVE]: Is a file name a useful description? -->
+                        <img class="card-img" src="images/card-vertical.jpg" alt="Hand holding a phone upright while taking a picture of the sunset" width="800" height="600">
+                        <div class="card-body">
+                            <p class="card-time"><time datetime="2026-12-05T19:00">Sat, Dec 5 · 7:00 PM</time></p>
+                            <h6 class="card-title">Vertical stories</h6>
+                            <p>Phone-shot series made for TikTok and Reels, shown 10 meters tall. Vote for the Audience Award.</p>
+                            <a class="card-link" href="#submit">Read more about vertical stories</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ACCESS ========== -->
+        <section class="section access" id="access">
+            <div class="container access-grid">
+                <div>
+                    <h2 class="section-title">Made for every viewer</h2>
+                    <p class="access-text">Every film at First Cut has open captions, so nobody has to ask for them. Saturday's 2:00 PM show is a relaxed screening: the lights stay low but on, the sound is softer, and you can move, talk or take a break whenever you need.</p>
+                    <ul class="access-list">
+                        <li>Open captions on every film</li>
+                        <li>Printed transcripts at Podcast live</li>
+                        <li>Relaxed screening: Sat, Dec 5, 2:00 PM</li>
+                        <li>Step-free entrance and wheelchair spaces</li>
+                    </ul>
+                </div>
+                <div class="access-side">
+                    <!-- TODO H19 [Eyes]: This photo is only decoration, and the alt is stuffed with keywords. What should the alt be? (Slide: Image Alt Text Rules, Rule #1) -->
+                    <img class="access-img" src="images/projector.jpg" alt="" width="800" height="600">
+                    <p class="stat"><span class="stat-number">70%</span> of Gen Z are frequent subtitle users. <span class="stat-source">Preply survey, 2022</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== LANGUAGES ========== -->
+        <section class="section" id="languages">
+            <div class="container">
+                <h2 class="section-title">Films from nine countries</h2>
+                <p class="section-intro">Every film is subtitled in English. Here is our tagline in four of the languages you'll hear.</p>
+                <!-- TODO H20 [Screen reader]: These lines are not in English, but the page says everything is. One of them is also read right to left.
+                     (Slides: Understandable, Designing for Global Users) -->
+                <ul class="tagline-list">
+                    <li><span class="tagline-lang">Arabic</span> <span class="tagline" lang="ar" dir="rtl">فيلمك الأول يستحق شاشة كبيرة.</span></li>
+                    <li><span class="tagline-lang">Spanish</span> <span class="tagline" lang="es">Tu primera película merece una pantalla grande.</span></li>
+                    <li><span class="tagline-lang">French</span> <span class="tagline" lang="fr">Ton premier film mérite un grand écran.</span></li>
+                    <li><span class="tagline-lang">Korean</span> <span class="tagline" lang="kr">당신의 첫 영화, 큰 스크린에서 만나요.</span></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== SUBMIT FORM ========== -->
+        <section class="section submit" id="submit">
+            <div class="container submit-grid">
+                <div>
+                    <h2 class="section-title">Submit your film</h2>
+                    <p class="deadline">Deadline: Mon, Nov 16, 2026 · 11:59 PM</p>
+                    <ul class="rules">
+                        <li>Free for students</li>
+                        <li>15 minutes or shorter</li>
+                        <li>Short film, podcast or vertical video</li>
+                    </ul>
+                </div>
+
+                <form class="form" action="#submit">
+                    <!-- TODO H21 [Eyes]: What if you can't see red? Show "required" with words, and make the browser check these fields. (Slide: Key Success Criteria) -->
+                    <p class="form-note">Fields in <span class="required">red</span> are required.</p>
+
+                    <!-- TODO H22 [WAVE]: This box has a placeholder but no label. (Slide: Form Labels) -->
+                    <label for="name" class="label">Your name</label>
+                    <input class="input" type="text" placeholder="Your name" required>
+
+                    <!-- TODO H23 [WAVE]: Click the word "Email". Does the cursor jump into the box? Also: is "text" the best input type for an email? (Slide: Form Labels) -->
+                    
+                    <label for="email" class="label required">Email</label>
+                    <input class="input" type="email" id="email" placeholder="exampleemail@gmail.com" required>
+
+                    <label class="label" for="film-link">Link to your film</label>
+                    <input class="input" type="url" id="film-link" name="film-link" placeholder="https://">
+
+                    <label class="label" for="format">Format</label>
+                    <select class="input" id="format" name="format">
+                        <option>Short film</option>
+                        <option>Podcast</option>
+                        <option>Vertical video</option>
+                    </select>
+
+                    <!-- TODO H24 [Keyboard]: Try to send this form with the keyboard only. And what does "Send it" mean? (Slide: Buttons vs Links) -->
+                    <button type="submit" class="button" >Submit my film</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <!-- TODO H25 [WAVE]: Use the right element for the page footer. -->
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <p class="footer-brand">First Cut</p>
+            <p>A festival run by students in the Department of Media &amp; Communication.</p>
+            <!-- TODO H26 [WAVE]: These links contain only an icon. What will a screen reader say? (Slide: ARIA Labels) -->
+            <ul class="social-list">
+                <li><a class="social-link" aria-label="First-cut on Instagram" href="https://www.instagram.com/"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a></li>
+                <li><a class="social-link" aria-label="First-cut on TikTok" href="https://www.tiktok.com/"><svg viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg></a></li>
+                <li><a class="social-link" aria-label="First-cut on YouTube" href="https://www.youtube.com/"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4"/><polygon points="10 9 15 12 10 15 10 9"/></svg></a></li>
+            </ul>
+            <p class="credits">Photos from Unsplash by Jake Hills, Jakob Owens, Jonathan Velasquez, Jordan McQueen and Jeremy Yap. © 2026 First Cut, a practice site for Introduction to Web Design.</p>
+        </div>
+        <div class="bars"></div>
+    </footer>
+
+</body>
+</html>

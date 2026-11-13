@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact RBW ENT.</title>
+</head>
+
+
+
+<body>
+    <!-- Site Header -->
+    <header class="site-header">
+        <a href="#" class="logo">ONEWE</a>
+        <nav class="site-nav">
+            <ul class="nav-list">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <form action="/submit" method="GET">
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="name">Name:</label>
+        <input type="name"
+            id="name"
+            name="name"
+            placeholder="Your Full Name..."
+            required>
+
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" 
+            autocomplete="email"
+            name="email" id="email" placeholder="Enter your email..." required>
+
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" 
+            name="phone" id="phone" placeholder="Enter your phone..."
+            max="10">
+        </fieldset>
+
+        <br>
+        <label for="message">Write your message:</label>
+        <textarea 
+            name="message" 
+            id="message" 
+            rows="4"
+            placeholder="Enter your message here...">
+        </textarea>
+
+        <!-- Site footer -->
+    <footer class="site-footer">
+        <div class="wrap">
+            <p>&copy; 2026 KProfiles. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>

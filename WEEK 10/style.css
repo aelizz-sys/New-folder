@@ -1,0 +1,571 @@
+:root {
+    --color-paper: #f4f5f7;
+    --color-white: #ffffff;
+    --color-ink: #16171b;
+    --color-slate: #26282f;
+    /* TODO C1 [WAVE contrast]: This gray is too light (2.21:1). In DevTools, click its color square and make it darker until you see a check mark. */
+    --color-muted: #2F3137;
+    /* TODO C2 [WAVE contrast]: The links are almost invisible (1.96:1). Make this blue darker. */
+    --color-link: #155F6F;
+    --color-yellow: #886606;
+    --color-magenta: #b8318f;
+    --color-cyan: #2bb6d6;
+    --color-line: #dcdfe5;
+    --bars: linear-gradient(90deg, #c0c0c0 0 14.28%, #f7c948 14.28% 28.57%, #2bb6d6 28.57% 42.85%, #3db26b 42.85% 57.14%, #b8318f 57.14% 71.42%, #d93a2b 71.42% 85.71%, #2a4bd0 85.71%);
+    --font-display: 'Big Shoulders', 'Arial Narrow', sans-serif;
+    --font-body: 'Atkinson Hyperlegible Next', Arial, sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+    --font-marker: 'Permanent Marker', cursive;
+    --max-width: 1140px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    /* TODO C3 [Eyes]: Is 14px big enough? (Slide: Readable Typography) */
+    font-size: 14px;
+    /* TODO C4 [Eyes]: The lines are squeezed together. (Slide: Readable Typography) */
+    line-height: 1.2;
+    color: var(--color-ink);
+    background-color: var(--color-paper);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: var(--color-link);
+    /* TODO C5 [Eyes]: Without an underline, how do you know a link is a link? */
+    text-decoration: underline;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.section {
+    padding: 5rem 0;
+}
+
+.section-title {
+    margin-bottom: 1rem;
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 7vw, 4.5rem);
+    font-weight: 800;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.section-intro {
+    max-width: 60ch;
+    margin-bottom: 2.5rem;
+    font-size: 1.125rem;
+    color: var(--color-muted);
+}
+
+.eyebrow {
+    margin-bottom: 1rem;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.bars {
+    height: 10px;
+    background-image: var(--bars);
+}
+
+/* TODO C6 [Keyboard]: Press Tab. Can you see where you are? This rule hides the focus ring. (Slide: Focus Indicators) */
+*:focus {
+    outline: none
+}
+
+.focus-visible {
+    outline: 3px solid var(--color-link);
+    outline-offset: 3px;
+}
+
+/* TODO C7 [Keyboard]: Give keyboard users a focus ring they can see. (Slide: Focus Indicators, Option 3) */
+
+.skip-link {
+    /* TODO C8 [Keyboard]: Do H4 first. Hide the skip link above the screen until it is needed (NOT with display: none). (Slide: Skip Links) */
+    position: absolute; 
+    top: -100px;
+    left: 1rem;
+    z-index: 10;
+    padding: 0.75rem 1.25rem;
+    font-weight: 700;
+    color: var(--color-white);
+    background-color: var(--color-ink);
+}
+
+/* TODO C9 [Keyboard]: Show the skip link when it gets keyboard focus. (Slide: Skip Links) */
+.skio-link:focus {
+    top: 1rem; 
+}
+
+.site-header {
+    background-color: var(--color-white);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: 1rem 0;
+}
+
+.nav {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.nav-link {
+    padding: 0.6rem 0.9rem;
+    font-weight: 700;
+    color: var(--color-ink);
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.nav-link:hover {
+    background-color: var(--color-paper);
+}
+
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.5rem;
+    font: inherit;
+    font-weight: 700;
+    /* TODO C10 [WAVE contrast]: White text on yellow (1.57:1). (Slide: Common Contrast Failures, #2) */
+    color: #ffffff;
+    text-decoration: none;
+    background-color: var(--color-yellow);
+    border: 2px solid var(--color-ink);
+    border-radius: 6px;
+}
+
+.button:hover {
+    background-color: var(--color-cyan);
+}
+
+.hero {
+    padding-top: 4rem;
+}
+
+.hero-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.hero-title {
+    margin-bottom: 1.5rem;
+    font-family: var(--font-display);
+    font-size: clamp(3.25rem, 10vw, 7rem);
+    font-weight: 800;
+    line-height: 0.88;
+    text-transform: uppercase;
+}
+
+.hero-intro {
+    max-width: 44ch;
+    margin-bottom: 2rem;
+    font-size: 1.25rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-img {
+    width: 100%;
+}
+
+.slate {
+    width: 100%;
+    max-width: 26rem;
+}
+
+.slate-sticks {
+    height: 2.75rem;
+    margin-bottom: 0.4rem;
+    background-image: repeating-linear-gradient(-45deg, #16171b 0 1.4rem, #ffffff 1.4rem 2.8rem);
+    border: 3px solid var(--color-ink);
+    border-radius: 6px 6px 0 0;
+    transform: rotate(-4deg);
+}
+
+.slate-board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0.5rem;
+    color: var(--color-white);
+    background-color: var(--color-slate);
+    border-radius: 0 0 10px 10px;
+}
+
+.slate-cell {
+    padding: 0.6rem 0.75rem;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.slate-wide {
+    grid-column: 1 / -1;
+}
+
+.slate-label {
+    display: block;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    color: #a9adb8;
+}
+
+.slate-value {
+    font-family: var(--font-marker);
+    font-size: 1.5rem;
+}
+
+.rec {
+    grid-column: 1 / -1;
+    padding: 0.5rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+}
+
+.rec-dot {
+    display: inline-block;
+    width: 0.7rem;
+    height: 0.7rem;
+    background-color: #d93a2b;
+    border-radius: 50%;
+    animation: rec-pulse 2s ease-in-out infinite;
+}
+
+@keyframes rec-pulse {
+    50% {
+        opacity: 0.25;
+    }
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: 10px;
+}
+
+.card-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.card-time {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.card-title {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.chip {
+    align-self: flex-start;
+    min-width: 2rem;
+    min-height: 1.75rem;
+    padding: 0.2rem 0.7rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+}
+
+.chip-film {
+    color: var(--color-white);
+    background-color: var(--color-magenta);
+}
+
+.chip-podcast {
+    color: var(--color-ink);
+    background-color: var(--color-yellow);
+}
+
+.chip-vertical {
+    color: var(--color-ink);
+    background-color: var(--color-cyan);
+}
+
+.card-link {
+    margin-top: auto;
+    font-weight: 700;
+}
+
+.access {
+    background-color: var(--color-white);
+    /* TODO C11 [Eyes]: Bright, busy stripes behind text. Calm this section down. (Slide: Sensory Considerations) */
+    background-image: var(--color-white);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.access-grid {
+    display: grid;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* TODO C12 [Eyes]: This rule breaks 4 rules from the "Typography DON'Ts" slides. Find them and fix them.
+   Tip: try each fix live first in DevTools (Elements > Styles). */
+.access-text {
+    max-width: 60ch;
+    font-family: var(--font-body);
+    font-size: 1.25rem;
+    font-style: normal;
+    text-transform: none;
+    text-align: left;
+}
+
+.access-list {
+    display: grid;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    padding-left: 1.25rem;
+    font-weight: 700;
+}
+
+.access-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.stat {
+    margin-top: 1.25rem;
+    font-size: 1.125rem;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.stat-source {
+    display: block;
+    margin-top: 0.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--color-muted);
+}
+
+.tagline-list {
+    list-style: none;
+    border-top: 1px solid var(--color-line);
+}
+
+.tagline-list li {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.tagline-lang {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-muted);
+}
+
+.tagline {
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 700;
+}
+
+.submit-grid {
+    display: grid;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.deadline {
+    display: inline-block;
+    padding: 0.4rem 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: var(--color-yellow);
+    background-color: var(--color-ink);
+    border-radius: 4px;
+}
+
+.rules {
+    display: grid;
+    gap: 0.4rem;
+    margin-top: 1.5rem;
+    padding-left: 1.25rem;
+    font-size: 1.125rem;
+}
+
+.form {
+    display: grid;
+    gap: 0.4rem;
+    padding: 2rem;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-line);
+    border-radius: 10px;
+}
+
+.form-note {
+    font-weight: 700;
+}
+
+.required {
+    color: #b3261e;
+}
+
+.label {
+    margin-top: 0.75rem;
+    font-weight: 700;
+}
+
+.input {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.7rem 0.9rem;
+    font: inherit;
+    background-color: var(--color-white);
+    /* TODO C13 [Eyes]: Where do I type? These borders are almost invisible (1.26:1). Form borders need 3:1. */
+    border: 2px solid #e3e5ea;
+    border-radius: 6px;
+}
+
+.form .button {
+    justify-self: start;
+    margin-top: 1.25rem;
+}
+
+.site-footer {
+    background-color: var(--color-white);
+    border-top: 1px solid var(--color-line);
+}
+
+.footer-grid {
+    display: grid;
+    gap: 1rem;
+    padding: 3rem 0;
+}
+
+.footer-brand {
+    font-family: var(--font-display);
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.social-list {
+    display: flex;
+    gap: 0.75rem;
+    list-style: none;
+}
+
+.social-link {
+    display: grid;
+    place-items: center;
+    /* TODO C14 [DevTools]: Hover these icons with the inspect arrow. Are 22 x 22 px easy to tap? (Slide: Operable, 44 x 44px) */
+    width: 44px;
+    height: 44px;
+    color: var(--color-ink);
+    border: 2px solid var(--color-ink);
+    border-radius: 50%;
+}
+
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+.credits {
+    font-size: 0.9rem;
+    color: var(--color-muted);
+}
+
+@media (min-width: 860px) {
+    .hero-grid {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .access-grid {
+        grid-template-columns: 1.3fr 1fr;
+    }
+
+    .submit-grid {
+        grid-template-columns: 1fr 1.3fr;
+    }
+}
+
+/* TODO C15 [DevTools Rendering]: Rendering tab > "Emulate CSS media feature prefers-reduced-motion" > reduce.
+   Does anything still move? Add the media query from the slide "Motion Sensitivity". It must stay LAST in the file. */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms!important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIDEQUEST | Campus Night Market</title>
+
+    <!-- STEP 1: Google Fonts (Unbounded for headings + Space Grotesk for body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Unbounded:wght@600;800&display=swap" rel="stylesheet">
+
+    <!-- STEP 2: Our stylesheet (AFTER the Google Fonts links) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== HEADER: sticky + hamburger menu (checkbox trick, no JavaScript) ========== -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#top" class="logo">SIDE<span class="logo-accent">QUEST</span></a>
+
+            <!-- The hidden checkbox (THE KEY!): checked = menu open -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+
+            <!-- The hamburger icon is a LABEL: clicking it ticks the checkbox -->
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </label>
+
+            <!-- The menu comes AFTER the checkbox, so CSS can use: .menu-toggle:checked ~ .nav-menu -->
+            <ul class="nav-menu">
+                <li><a href="#drops" class="nav-link">Drops</a></li>
+                <li><a href="#lineup" class="nav-link">Lineup</a></li>
+                <li><a href="#zine" class="nav-link">Zine</a></li>
+                <li><a href="#rsvp" class="nav-link nav-link-cta">RSVP</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="top">
+
+        <!-- ========== HERO: staggered fade-in + art-directed <picture> ========== -->
+        <section class="hero">
+            <div class="hero-text container">
+                <p class="hero-kicker"><span class="live-dot"></span> Fri, Nov 13 &middot; North Quad &middot; Free</p>
+                <h1 class="hero-title">One night. <span class="hero-highlight">Zero</span> homework.</h1>
+                <p class="hero-sub">Thrift racks, food trucks, student DJs, and a sticker wall the size of a bus. Bring your ID, bring your friends.</p>
+                <p class="hero-actions">
+                    <a href="#rsvp" class="button">Claim a free ticket <span class="arrow" aria-hidden="true">&rarr;</span></a>
+                </p>
+            </div>
+
+            <div class="hero-visual container">
+                <!-- ART DIRECTION with <picture>: a DIFFERENT crop for each screen size.
+                     The browser checks each <source> from top to bottom and uses the FIRST match.
+                     Desktop: wide crop | Tablet: medium crop | Phone: tall crop on the DJ.
+                     Try it: make the window narrow and wide and watch the picture change. -->
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="images/hero-wide.svg">
+                    <source media="(min-width: 768px)" srcset="images/hero-medium.svg">
+                    <img src="images/hero-tall.svg" alt="A night market under string lights with a DJ booth, food trucks, and a crowd" class="hero-image">
+                </picture>
+
+                <p class="sticker sticker-1">free food?!</p>
+                <p class="sticker sticker-2">no exams allowed</p>
+            </div>
+
+            <a href="#drops" class="scroll-indicator">&darr; scroll</a>
+        </section>
+
+        <!-- ========== DROPS: product cards ========== -->
+        <section id="drops" class="section">
+            <div class="container">
+                <h2 class="section-title">Thrift Drops</h2>
+                <p class="section-intro">Every piece is under $25 and hand-picked by the Campus Thrift Collective.</p>
+
+                <ul class="drop-grid">
+                    <li class="drop-card drop-card--pink">
+                        <img src="images/drop-jacket.svg" alt="A red and cream varsity bomber jacket" class="drop-image">
+                        <h3 class="drop-name">Varsity Bomber</h3>
+                        <p class="drop-price">$24</p>
+                    </li>
+                    <li class="drop-card">
+                        <img src="images/drop-hat.svg" alt="A purple bucket hat with a smiley patch" class="drop-image drop-image-top">
+                        <h3 class="drop-name">Bucket Hat</h3>
+                        <p class="drop-price">$9</p>
+                    </li>
+                    <li class="drop-card drop-card--lime">
+                        <img src="images/drop-sneakers.svg" alt="White high-top sneakers with blue stripes" class="drop-image">
+                        <h3 class="drop-name">Court High-Tops</h3>
+                        <p class="drop-price">$22</p>
+                    </li>
+                    <li class="drop-card">
+                        <img src="images/drop-camera.svg" alt="A silver film camera with a black lens" class="drop-image">
+                        <h3 class="drop-name">Film Camera <span class="new-label">New</span></h3>
+                        <p class="drop-price">$25</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ========== LINEUP: structural pseudo-classes ========== -->
+        <section id="lineup" class="section">
+            <div class="container">
+                <h2 class="section-title">Tonight's Lineup</h2>
+
+                <ol class="lineup-list">
+                    <li class="lineup-row"><span class="lineup-time">6:00 PM</span> <span class="lineup-act">Doors open + free churros</span></li>
+                    <li class="lineup-row"><span class="lineup-time">7:00 PM</span> <span class="lineup-act">Lo-Fi Library Club</span></li>
+                    <li class="lineup-row"><span class="lineup-time">8:30 PM</span> <span class="lineup-act">The Group Project (live band)</span></li>
+                    <li class="lineup-row"><span class="lineup-time">10:00 PM</span> <span class="lineup-act">Silent disco</span></li>
+                    <li class="lineup-row"><span class="lineup-time">11:00 PM</span> <span class="lineup-act">DJ Static Bloom (headliner)</span></li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- ========== SPOTLIGHT: container queries (same card, two different boxes) ========== -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Vendor Spotlight</h2>
+                <p class="section-intro">Same HTML, same CSS. The wide box has room, so its card switches to a side-by-side layout.</p>
+
+                <div class="spotlight-layout">
+                    <div class="spotlight-slot">
+                        <article class="spotlight">
+                            <div class="spotlight-media">
+                                <img src="images/spot-dumplings.svg" alt="A basket of dumplings in front of a red food truck" class="spotlight-image">
+                            </div>
+                            <div class="spotlight-body">
+                                <h3 class="spotlight-title">Dumpling Dynasty</h3>
+                                <p>Two engineering majors fold 2,000 dumplings by hand before every market.</p>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="spotlight-slot">
+                        <article class="spotlight">
+                            <div class="spotlight-media">
+                                <img src="images/spot-stickers.svg" alt="A table covered in colorful handmade stickers" class="spotlight-image">
+                            </div>
+                            <div class="spotlight-body">
+                                <h3 class="spotlight-title">Sticker Goblin</h3>
+                                <p>Hand-drawn stickers about midterms, cats, and bad Wi-Fi.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ZINE: readable line length (ch) + pseudo-elements + srcset ========== -->
+        <section id="zine" class="section">
+            <article class="zine">
+                <h2 class="zine-title">How six students turned a parking lot into a party</h2>
+
+                <p class="zine-lead">Six of us were stuck in the library at 1 a.m., three days before finals. Someone said, "I wish there was somewhere to go that wasn't here." By sunrise we had a plan, a name, and a borrowed speaker.</p>
+
+                <blockquote class="zine-quote">
+                    We just wanted one night a semester where nobody asks about your GPA.
+                </blockquote>
+
+                <p>This year we have forty student vendors and a real stage. Everything is still run by students.</p>
+
+                <!-- SRCSET: the SAME picture in three file sizes. The browser downloads only ONE.
+                     400w / 800w / 1200w = the real width of each file.
+                     sizes = how wide it SHOWS: full screen width up to 600px, then 720px.
+                     Each file has its name printed in the corner so you can SEE which one loaded. -->
+                <img src="images/recap-800.svg"
+                     srcset="images/recap-400.svg 400w,
+                             images/recap-800.svg 800w,
+                             images/recap-1200.svg 1200w"
+                     sizes="(max-width: 600px) 100vw, 720px"
+                     alt="Last year's crowd dancing under string lights"
+                     class="recap-image">
+            </article>
+        </section>
+
+        <!-- ========== RSVP: form pseudo-classes ========== -->
+        <section id="rsvp" class="section">
+            <div class="container">
+                <h2 class="section-title">Get on the List</h2>
+                <p class="section-intro">Tickets are free, but we need a head count for the food trucks.</p>
+
+                <form class="rsvp-form" action="#">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="What should we call you?" required>
+
+                    <label for="email" class="form-label">School email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="you@school.edu" required>
+
+                    <button type="submit" class="button">Send my ticket <span class="arrow" aria-hidden="true">&rarr;</span></button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER: animated underlines ========== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <p class="footer-logo">SIDEQUEST</p>
+            <ul class="footer-links">
+                <li><a href="#" class="footer-link">Volunteer</a></li>
+                <li><a href="#" class="footer-link">Rent a table</a></li>
+                <li><a href="#" class="footer-link">Contact</a></li>
+            </ul>
+        </div>
+        <p class="footer-bottom">&copy; 2026 SIDEQUEST Collective</p>
+    </footer>
+
+</body>
+</html>

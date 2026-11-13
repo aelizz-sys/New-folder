@@ -1,0 +1,841 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #23302f;
+    background-color: #fbf7f1;
+}
+
+h1, h2, h3 {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-weight: 400;
+    line-height: 1.15;
+    color: #0e3b43;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 0.75rem;
+}
+
+.section-intro {
+    max-width: 38rem;
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: #5f6d6b;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #e8553f;
+    border: 2px solid #e8553f;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+
+.button-outline {
+    color: #0e3b43;
+    background-color: transparent;
+    border-color: #0e3b43;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #0e3b43;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.5rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+.logo {
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.logo-accent {
+    color: #ff8a73;
+}
+
+.nav-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #d6e6e3;
+    text-decoration: none;
+}
+
+.hero {
+    /* TODO 1: We want full control over the hero layout. Make the hero a grid container. */
+    display: grid;
+    /* TODO 2: The button and the stats strip are stretched across the whole hero. Center every item from left to right. */
+    justify-items: center;
+    /* TODO 3: The content is spread out from top to bottom of the tall hero. Pack all the rows together in the vertical middle. */
+    align-items: center;
+    /* TODO 4: The kicker, title, text, button, and stats are touching. Add 1.25rem of space between them. */
+    gap: 1rem;
+    min-height: 75vh;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #0e3b43;
+}
+
+.hero-kicker {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ff8a73;
+}
+
+.hero-title {
+    max-width: 44rem;
+    font-size: 3.5rem;
+    color: #ffffff;
+}
+
+.hero-text {
+    max-width: 34rem;
+    font-size: 1.125rem;
+    color: #c9dcd8;
+}
+
+.hero-stats {
+    /* TODO 5: The three stats are stacked on top of each other. Make the stats list a grid container. */
+    display: grid;
+    /* TODO 6: Put the three stats in one row: 3 columns, each exactly 6rem wide. */
+    grid-template-columns: repeat(3, 1fr);
+    /* TODO 7: The 3 columns are bunched up on the left side of the strip. Spread them out with equal space around each one. */
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 40rem;
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2c5f66;
+}
+
+.stat-number {
+    display: block;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 2.25rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #ff8a73;
+}
+
+.stat-label {
+    display: block;
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #c9dcd8;
+}
+
+.gallery-section {
+    padding: 5rem 1.5rem;
+}
+
+.filter-list {
+    /* TODO 8: The filter buttons are stacked on top of each other. Make the filter list a grid container. */
+    display: grid;
+    /* TODO 9: Make as many columns as will fit (each at least 7rem wide), but keep the empty columns so the 5 buttons do NOT stretch across the whole page. */
+    grid-template-columns: repeat(5, 1fr);
+    /* TODO 10: The buttons are touching. Add 0.75rem of space between them. */
+    gap: 0.75rem;
+    max-width: 1000px;
+    margin: 0 auto 1.5rem;
+}
+
+.filter {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #0e3b43;
+    background-color: transparent;
+    border: 1px solid #0e3b43;
+    border-radius: 2rem;
+}
+
+.filter-active {
+    color: #ffffff;
+    background-color: #0e3b43;
+}
+
+.gallery {
+    /* TODO 11: The photos are stacked in one long column. Make the gallery a grid container. */
+    display: grid;
+    /* TODO 12: Make as many columns as will fit, each at least 160px wide, and let them stretch to fill the row. (One line of CSS, no media queries!) */
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    /* TODO 13: The photos are all different heights. Make every row exactly 180px tall. */
+    grid-auto-rows: 180px;
+    /* TODO 14: The photos are touching. Add 16px of space between them. */
+    gap: 1rem;
+    /* TODO 15: BONUS: Some spots in the gallery are left empty because the big photos do not fit. Let the smaller photos fill those holes. */
+    grid-auto-flow: dense;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.gallery-item {
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #e4ddd1;
+}
+
+.gallery-item img {
+    width: 100%;
+    /* TODO 16: The photos do not fill their boxes from top to bottom. Make each photo fill the full height of its box. */
+    height: 100%;
+    /* TODO 17: The photos look squished and stretched. Crop each photo so it fills the box but keeps its shape. */
+    object-fit: cover;
+}
+
+.gallery-item:nth-child(3n) {
+    /* TODO 18: Make every 3rd photo WIDE: 2 columns across, starting wherever it already is. */
+    grid-column: span 2;
+}
+
+.gallery-item:nth-child(5n) {
+    /* TODO 19: Make every 5th photo TALL: 2 rows down, starting wherever it already is. */
+    grid-row: span 2;
+}
+
+.contest-section {
+    padding: 5rem 1.5rem;
+    background-color: #ffffff;
+}
+
+.contest-grid {
+    /* TODO 20: The contest photos are stacked on top of each other. Make the contest area a grid container. */
+    display: grid;
+    /* TODO 21: Create 3 equal columns (use the shortcut that repeats a size). */
+    grid-template-columns: repeat(3, 1fr);
+    /* TODO 22: Create 3 rows, each exactly 12rem tall (use the same shortcut). */
+    grid-template-rows: repeat(3, 12rem);
+    /* TODO 23: The entries are touching. Add 1rem of space between them. */
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.entry {
+    /* TODO 24: Each label sits under its photo. We want the label ON TOP of the photo. Start by making each entry a grid container. */
+    display: grid;
+    grid-template-rows: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    background-color: #e4ddd1;
+}
+
+.entry-winner {
+    /* TODO 25: The winner should fill the top-left of the board. Start it at vertical line 1... */
+    grid-column-start: 1;
+    /* TODO 26: ...end it at vertical line 3 (that makes it 2 columns wide)... */
+    grid-column-end: 4;
+    /* TODO 27: ...start it at horizontal line 1... */
+    grid-row-start: 1;
+    /* TODO 28: ...and end it at horizontal line 3 (that makes it 2 rows tall). */
+    grid-row-end: 3;
+    grid-row: 1 / span 2;
+}
+
+.entry-honorable {
+    /* TODO 29: The honorable mention should fill the last two cells of the bottom row. Start it at vertical line 2 and stretch it across 2 columns. */
+    grid-column: 2 / span 2;
+}
+
+.entry-image,
+.entry-label {
+    /* TODO 30: Put the photo AND the label in the same row: row 1... */
+    grid-row: 1;
+    /* TODO 31: ...and in the same column: column 1. Now they overlap! */
+    grid-column: 1;
+}
+
+.entry-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.entry-label {
+    /* TODO 32: The label covers the whole photo. Move ONLY the label to the bottom of its cell... */
+    align-self: end;
+    /* TODO 33: ...and to the left side, only as wide as its text. */
+    justify-self: start;
+    margin: 0.75rem;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #0e3b43;
+    border-radius: 2rem;
+}
+
+.entry-label-gold {
+    color: #0e3b43;
+    background-color: #f6c453;
+}
+
+.contest-note {
+    /* TODO 34: Put the "next theme" note in the first column: from vertical line 1 to vertical line 2. */
+    grid-column: 1 / span 1;
+    padding: 1rem;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #e8553f;
+    border-radius: 12px;
+}
+
+.walks-section {
+    padding: 5rem 1.5rem;
+}
+
+.walk-list {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.walk {
+    /* TODO 35: The date, the details, and the spots are stacked. Make each walk a grid container. */
+    display: grid;
+    /* TODO 36: Create 3 columns: a fixed 4rem column for the date, a flexible middle column that takes the rest, and a fixed 6rem column for the spots. */
+    grid-template-columns: 4rem 1fr 6rem;
+    /* TODO 37: The date, details, and spots sit at different heights. Center all of them vertically in the row. */
+    align-items: center;
+    /* TODO 38: The columns are touching. Add 1.25rem of space between them. */
+    gap: 1.25rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    border: 1px solid #e6dfd3;
+    border-radius: 12px;
+}
+
+.walk-date {
+    padding: 0.4rem 0;
+    text-align: center;
+    line-height: 1.1;
+    color: #ffffff;
+    background-color: #0e3b43;
+    border-radius: 10px;
+}
+
+.walk-month {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.walk-day {
+    display: block;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.75rem;
+}
+
+.walk-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.walk-meta {
+    font-size: 0.875rem;
+    color: #5f6d6b;
+}
+
+.walk-spots {
+    /* TODO 39: The "spots left" pill stretches across its whole column. Push ONLY the pill to the right end of its column (as wide as its text). */
+    justify-self: end;
+    padding: 0.3rem 0.8rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: #0e3b43;
+    background-color: #dcece8;
+    border-radius: 2rem;
+}
+
+.walk-spots-full {
+    color: #ffffff;
+    background-color: #c2412d;
+}
+
+.hub-section {
+    padding: 5rem 1.5rem;
+    background-color: #efe5d6;
+}
+
+.hub {
+    /* TODO 40: The hub's header, menu, content, and footer are stacked on top of each other. Make the hub a grid container. */
+    display: grid;
+    /* TODO 41: Create 2 columns: a sidebar column that is never smaller than 180px and never bigger than 240px, and a content column that takes the rest. */
+    grid-template-columns: minmax(180px, 240px) 1fr;
+    /* TODO 42: Create 3 rows: the first and last are only as tall as their content, the middle row takes the rest. */
+    grid-template-rows: auto 1fr auto;
+    /* TODO 43: Draw the layout with names: the header across the top, the sidebar down the left for the last 2 rows, the content and the footer on the right. */
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "sidebar footer";
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #ddd2c0;
+    border-radius: 16px;
+}
+
+.hub-header {
+    /* TODO 44: Put the hub header in the area you named "header". */
+    grid-area: header;
+    /* TODO 45: The greeting and the upload button are stacked. Make the header a flex container (a layout inside a grid area!). */
+    display: flex;
+    /* TODO 46: Put the greeting on the far left and the upload button on the far right. */
+    justify-content: space-between;
+    /* TODO 47: The greeting and the button are not lined up. Center them vertically. */
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+    background-color: #0e3b43;
+}
+
+.hub-upload {
+    padding: 0.45rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #e8553f;
+    border-radius: 2rem;
+    text-decoration: none;
+}
+
+.hub-sidebar {
+    /* TODO 48: Put the hub menu in the area you named "sidebar". */
+    grid-area: sidebar;
+    padding: 1.25rem 1rem;
+    background-color: #f6f1e9;
+    border-right: 1px solid #ebe2d4;
+}
+
+.hub-link {
+    display: block;
+    margin-bottom: 0.25rem;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.9375rem;
+    color: #23302f;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.hub-link-active {
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #0e3b43;
+}
+
+.hub-content {
+    /* TODO 49: Put the main panel in the area you named "content". */
+    grid-area: content;
+    /* TODO 50: Make the content panel a flex container (watch what happens!). */
+    display: flex;
+    /* TODO 51: Oops, everything jumped side by side! Stack the title, text, stats, and buttons back on top of each other. */
+    flex-direction: column;
+    /* TODO 52: The stacked items are touching. Add 1.25rem of space between them. */
+    gap: 1.25rem;
+    padding: 1.5rem;
+}
+
+.hub-title {
+    font-size: 1.5rem;
+}
+
+.hub-text {
+    color: #5f6d6b;
+}
+
+.hub-stats {
+    /* TODO 53: The three stat boxes are stacked. Make the stats list a grid container. */
+    display: grid;
+    /* TODO 54: Put the stats in 3 columns where the first column is TWICE as wide as each of the other two. */
+    grid-template-columns: 2fr 1fr 2fr;
+    /* TODO 55: The stat boxes are touching. Add 0.75rem of space between them. */
+    gap: 0.75rem;
+}
+
+.hub-stat {
+    padding: 1rem;
+    background-color: #f6f1e9;
+    border-radius: 12px;
+}
+
+.hub-stat-number {
+    display: block;
+    font-family: 'DM Serif Display', Georgia, serif;
+    font-size: 1.75rem;
+    font-weight: 400;
+    line-height: 1.1;
+    color: #0e3b43;
+}
+
+.hub-stat-label {
+    font-size: 0.8125rem;
+    color: #5f6d6b;
+}
+
+.progress {
+    display: block;
+    height: 8px;
+    margin-top: 0.6rem;
+    background-color: #e2d8c7;
+    border-radius: 1rem;
+}
+
+.progress-bar {
+    display: block;
+    width: 66%;
+    height: 100%;
+    background-color: #e8553f;
+    border-radius: 1rem;
+}
+
+.button-group {
+    /* TODO 56: The two buttons need their own layout. Make the button group a flex container. */
+    display: flex;
+    /* TODO 57: The two buttons are touching. Add 0.75rem of space between them. */
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.hub-footer {
+    /* TODO 58: Put the hub footer in the area you named "footer". */
+    grid-area: footer;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.5rem 1rem;
+    padding: 1rem 1.5rem;
+    font-size: 0.875rem;
+    color: #5f6d6b;
+    border-top: 1px solid #ebe2d4;
+}
+
+.hub-footer-link {
+    font-weight: 700;
+    color: #c2412d;
+}
+
+.wall-section {
+    padding: 5rem 1.5rem;
+}
+
+.wall {
+    /* TODO 59: The polaroids are stacked in one long column. Make the wall a grid container. */
+    display: grid;
+    /* TODO 60: Make as many columns as will fit, each at least 270px wide, stretched to fill the row. */
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    /* TODO 61: Make every row 19rem tall, so each polaroid has extra room to move around in its cell. */
+    grid-auto-rows: 19rem;
+    /* TODO 62: Center ALL the polaroids from left to right inside their cells. */
+    justify-items: center;
+    /* TODO 63: ...and from top to bottom. Perfect centering for every polaroid! */
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: #c79a6b;
+    border: 10px solid #7a5232;
+    border-radius: 12px;
+}
+
+.polaroid {
+    width: 11rem;
+    padding: 0.6rem 0.6rem 0.4rem;
+    background-color: #ffffff;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid:nth-child(odd) {
+    transform: rotate(-3deg);
+}
+
+.polaroid:nth-child(even) {
+    transform: rotate(2.5deg);
+}
+
+.polaroid-image {
+    width: 100%;
+    height: 8.5rem;
+    object-fit: cover;
+}
+
+.polaroid-caption {
+    padding-top: 0.4rem;
+    font-size: 0.875rem;
+    font-style: italic;
+    text-align: center;
+    color: #3d3a36;
+}
+
+.polaroid-top {
+    /* TODO 64: Make the polaroids with this class break the rule: pin them to the TOP of their cells. */
+    align-self: start;
+}
+
+.polaroid-bottom {
+    /* TODO 65: Pin the polaroids with this class to the BOTTOM of their cells. */
+    align-self: end;
+}
+
+.polaroid-left {
+    /* TODO 66: Pin the polaroids with this class to the LEFT side of their cells. */
+    justify-self: start;
+}
+
+.polaroid-right {
+    /* TODO 67: Pin the polaroids with this class to the RIGHT side of their cells. */
+    justify-self: end;
+}
+
+.join-section {
+    /* TODO 68: Make the join section a grid container. */
+    display: grid;
+    /* TODO 69: Create 3 columns: two equal flexible side columns, and a middle column that is never smaller than 280px and never bigger than 720px. */
+    grid-template-columns: 1fr minmax(280px, 720px) 1fr;
+    padding: 5rem 1rem;
+    background-color: #ffffff;
+}
+
+.join-card {
+    /* TODO 70: The card is squeezed into the narrow first column. Put it in the middle column. */
+    grid-column: 2;
+    padding: 2.5rem 2rem;
+    background-color: #fbf7f1;
+    border: 1px solid #e6dfd3;
+    border-radius: 16px;
+}
+
+.join-form {
+    /* TODO 71: The form fields are stacked in one long column. Make the form a grid container. */
+    display: grid;
+    /* TODO 72: Make as many columns as will fit, each at least 220px wide, stretched to fill the row. */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* TODO 73: The fields are touching. Add 1rem of space between the rows and 1.25rem between the columns. */
+    gap: 1rem 1.25rem;
+}
+
+.form-field-full {
+    /* TODO 74: The message box is squeezed into one column. Make it take the FULL row, from the first line to the last line. */
+    grid-column: 1 / -1;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.9375rem;
+    font-weight: 700;
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.75rem 0.9rem;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 1rem;
+    color: #23302f;
+    background-color: #ffffff;
+    border: 1px solid #c9c0b1;
+    border-radius: 8px;
+}
+
+.form-button {
+    /* TODO 75: The button stretches across its whole column. Make it only as wide as its text, on the left side of its cell. */
+    justify-self: start;
+    padding: 0.85rem 1.75rem;
+    font-family: 'DM Sans', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #ffffff;
+    background-color: #e8553f;
+    border: none;
+    border-radius: 2rem;
+}
+
+.site-footer {
+    padding: 4rem 1.5rem 2rem;
+    color: #c9dcd8;
+    background-color: #0b2e34;
+}
+
+.footer-grid {
+    /* TODO 76: The footer columns are stacked on top of each other. Make the footer grid a grid container. */
+    display: grid;
+    /* TODO 77: Make as many columns as will fit, each at least 250px wide, stretched to fill the row. */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    /* TODO 78: The columns are touching. Add 2.5rem of space between them. */
+    gap: 2.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer-heading {
+    font-size: 1.25rem;
+    color: #ffffff;
+    margin-bottom: 0.6rem;
+}
+
+.footer-link {
+    color: #ff8a73;
+}
+
+.footer-bottom {
+    /* TODO 79: The copyright line is squeezed in next to the columns. Make it take the FULL row, from the first line to the last line. */
+    grid-column: 1 / -1;
+    padding-top: 2rem;
+    font-size: 0.875rem;
+    text-align: center;
+    border-top: 1px solid #1f4c53;
+}
+
+
+
+*// ===================================
+MEDIA QUERIES - DESKTOP FIRST
+======================================= *//
+
+/* TABLET/IPAD SCREEN */
+@media (min-width: 768px) {
+    .walk {
+        grid-template-columns: 1fr;
+    }
+
+    .contest-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    }
+}
+
+/* MOBILE SCREEN */
+@media (max-width: 480px) {
+    .contest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hub {
+    display: grid;
+    grid-template-columns: minmax(125px, 200px) 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header header"
+        "sidebar content"
+        "sidebar footer";
+    max-width: 468px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 1px solid #ddd2c0;
+    border-radius: 16px;
+    }
+
+    .hub-header {
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem 1.5rem;
+    color: #ffffff;
+    background-color: #0e3b43;
+    }
+
+
+*/ DESKTOP SCREEN */
+@media (min-width: 1024px) {
+    .walk {
+
+    }
+
+.hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+}
+IPAD
+.hero-stats {
+grid-template-columns: repeat(2, 1fr);
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 40rem;
+    margin-top: 1.5rem;
+    padding-top: 2rem;
+    border-top: 1px solid #2c5f66;
+}
+
+@media (orientation: landscape) {
+
+}
+
+@media (orientation: portrait) {
+
+
+}
+
+@media print {
+    .nav, .sidebar, .ads, .footer {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #242424;
+        color: #c9c0b1;
+    }
+}

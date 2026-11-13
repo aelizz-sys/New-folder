@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="800" viewBox="0 0 600 800">
+  <rect width="600" height="800" fill="#ffe4f2"/>
+  <path d="M190 190 L120 260 L80 560 L150 570 L180 380 L180 640 L420 640 L420 380 L450 570 L520 560 L480 260 L410 190 Z" fill="#e3342f" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M190 190 L300 300 L410 190" fill="#fff4e0" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M120 260 L180 380 M480 260 L420 380" stroke="#fff4e0" stroke-width="22"/>
+  <rect x="180" y="600" width="240" height="40" fill="#fff4e0" stroke="#111" stroke-width="8"/>
+  <text x="250" y="470" font-family="Arial Black, Arial, sans-serif" font-size="110" fill="#fff4e0" stroke="#111" stroke-width="6">S</text>
+</svg>

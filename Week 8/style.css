@@ -1,0 +1,721 @@
+:root {
+    /* TODO 1: COLORS. Declare these 8 color variables (write each one as  --name: value;) */
+    --color-background: #fff6e5;
+    --color-text: #111111;
+    --color-muted: #4a4458;
+    --color-surface: #fff;
+    --color-primary:#92ac3b;
+    --color-secondary:#ff6ec7;
+    --color-success:#1f9d55;
+    --color-error: #ff3b5c;
+    /* TODO 2: FONTS. Declare these 2 font variables: */
+    --font-display: 'Unbounded', 'Arial Black', 'sans-serif';
+    --font-body: 'Space Grotesk', Arial, sans-serif;
+    /* TODO 3: TYPE SCALE. Declare these 4 font-size variables. Each value is a clamp(MIN, PREFERRED, MAX): */
+    --font-base: clamp(1rem, 1.5vw, 1.125rem);
+    --font-lg: clamp(1.125rem, 2vw, 1.5rem);
+    --font-xl: clamp(1.75rem, 4vw, 3rem);
+    --font-hero: clamp(2rem, 8vw, 5.5rem);
+    /* TODO 4: SPACING. Declare these 2 spacing variables: */
+    --space-lg: 1.5rem;
+    --space-section: clamp(3.5rem, 8vw, 6rem);
+    /* TODO 5: SHAPE. Declare these 3 shape variables: */
+    --radius: 18px;
+    --radius-pill: 999px;
+    --border: 3px solid #111111;
+    /* TODO 6: OTHER. Declare these 3 variables: */
+    --leading-tight:1.1;
+    --leading-normal: 1.6;
+    --max-width: 1100px;
+}
+
+/* TODO 7: Write an animation named fadeInUp with @keyframes. FROM: opacity 0 (invisible) and transform translateY(30px) (30px lower). TO: opacity 1 (visible) and transform translateY(0) (normal position). */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* TODO 8: Write an animation named pulse with @keyframes. At 0% and 100%: transform scale(1) (normal size). At 50%: transform scale(1.3) (30% bigger). */
+
+
+/* TODO 9: Write an animation named float with @keyframes. At 0% and 100%: transform translateY(0). At 50%: transform translateY(-10px) (10px higher). */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* TODO 10: Give the page its font using the --font-body variable. */
+    font-family: var(--font-body);
+    /* TODO 11: Give the page its text size using the --font-base variable. */
+    font-size: var(--font-base);
+    /* TODO 12: Give the page its line height using the --leading-normal variable. */
+    line-height: var(--leading-normal);
+    /* TODO 13: Give the page its text color using the --color-text variable. */
+    color: var(--color-text);
+    /* TODO 14: Give the page its background color using the --color-background variable. */
+    background-color: var(--color-background);
+}
+
+h1,
+h2,
+h3 {
+    /* TODO 15: Give the headings their font using the --font-display variable. */
+    font-family: var(--font-display);
+    /* TODO 16: Give the headings their line height using the --leading-tight variable. */
+    line-height: var(--leading-tight);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.container {
+    width: 90%;
+    /* TODO 17: Limit the container width using the --max-width variable. */
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.section {
+    /* TODO 18: Give each section its top and bottom padding using the --space-section variable (0 on the sides). */
+    padding: var(--space-section) 0;
+}
+
+.section-title {
+    /* TODO 19: Make the section titles use the --font-xl variable for their size. */
+    font-size: var(--font-xl);
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-intro {
+    max-width: var(--max-width);
+    margin: 0 auto 2.5rem;
+    text-align: center;
+    color: var(--color-dark);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #fff6e5;
+    border-bottom: 3px solid #111111;
+}
+
+.navbar {
+    /* TODO 20: HAMBURGER STEP 1: The drop-down menu will be placed relative to the navbar. Make the navbar the reference point (position). */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.9rem 0;
+}
+
+.logo {
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #111111;
+    text-decoration: none;
+}
+
+.logo-accent {
+    padding: 0 0.3rem;
+    background-color: #c6f432;
+}
+
+.menu-toggle {
+    /* TODO 21: HAMBURGER STEP 2: Hide the checkbox completely. Clicking the hamburger label will still tick it. */
+    display: none;
+}
+
+.hamburger {
+    /* TODO 22: HAMBURGER STEP 3: The hamburger holds 3 bars. Make it a flex container... */
+    display: flex;
+    /* TODO 23: ...and stack the 3 bars on top of each other. */
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.7rem 0.6rem;
+    border: 3px solid #111111;
+    border-radius: 12px;
+}
+
+.hamburger span {
+    display: block;
+    /* TODO 24: HAMBURGER STEP 4: Draw the bars. Make each bar 26px wide... */
+    width: 26px;
+    /* TODO 25: ...and 3px tall. */
+    height: 3px;
+    background-color: #111111;
+    /* TODO 26: HAMBURGER STEP 8a: Make the bars change smoothly when the menu opens: transition the transform over 0.3 seconds with ease. */
+    transition: transform .3s ease;
+}
+
+.nav-menu {
+    /* TODO 27: HAMBURGER STEP 5: On phones the menu should float OVER the page instead of pushing it down. Take it out of the normal flow (position). */
+    position: absolute;
+    /* TODO 28: Place the menu right under the navbar (100% from the top of the navbar). */
+    top: 100%;
+    left: 0;
+    right: 0;
+    /* TODO 29: HAMBURGER STEP 6: Hide the menu. It stays hidden until the checkbox is checked (the :checked TODO below). */
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    background-color: #ffffff;
+    border: 3px solid #111111;
+    border-radius: 16px;
+}
+
+.menu-toggle:checked ~ .nav-menu {
+    /* TODO 30: HAMBURGER STEP 7: THE MAGIC LINE. When the menu checkbox is checked (:checked), show the menu as a flex container. */
+    display: flex;
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(1) {
+    /* TODO 31: HAMBURGER STEP 8b: When the menu is open, turn the TOP bar into half of an X: move it down 8px (translateY), then rotate it 45 degrees. */
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(2) {
+    /* TODO 32: HAMBURGER STEP 8c: When the menu is open, make the MIDDLE bar disappear by scaling it to 0. */
+    transform: scale(0);
+}
+
+.menu-toggle:checked ~ .hamburger span:nth-child(3) {
+    /* TODO 33: HAMBURGER STEP 8d: When the menu is open, turn the BOTTOM bar into the other half of the X: move it up 8px, then rotate it -45 degrees. */
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-link {
+    display: inline-block;
+    padding: 0.4rem 0;
+    font-weight: 700;
+    color: #111111;
+    text-decoration: none;
+}
+
+.nav-link-cta {
+    padding: 0.4rem 1rem;
+    background-color: #c6f432;
+    border: 3px solid #111111;
+    border-radius: 999px;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.9rem 1.6rem;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111111;
+    /* TODO 34: Give the button its background color using the --color-primary variable. */
+    border: 3px solid #111111;
+    border-width: 3px 6px 6px 3px;
+    /* TODO 35: Make the button pill-shaped using the --radius-pill variable. */
+    text-decoration: none;
+    /* TODO 36: Make the button move smoothly on hover and click: transition the transform over 0.2 seconds with ease. */
+    transition: transform .2s ease;
+}
+
+.button:hover {
+    /* TODO 37: When the mouse is over the button (:hover), lift it 4px up AND tilt it -2 degrees. */
+    transform: translateY(4px) rotate(-2deg);
+}
+
+.button:active {
+    /* TODO 38: While the button is being clicked (:active), shrink it to 95% of its size. */
+    transform: scale(0.95);
+}
+
+.arrow {
+    display: inline-block;
+    margin-left: 0.3rem;
+    /* TODO 39: Make the arrow inside the buttons move smoothly: transition its transform over 0.2 seconds with ease. */
+}
+
+.button:hover .arrow {
+    /* TODO 40: When a button is hovered, slide the arrow inside it 5px to the right. */
+}
+
+.hero {
+    padding-top: clamp(2.5rem, 6vw, 5rem);
+    text-align: center;
+}
+
+.hero-kicker {
+    display: inline-block;
+    margin-bottom: 1.25rem;
+    padding: 0.4rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 700;
+    background-color: #ffffff;
+    border: 3px solid #111111;
+    border-radius: 999px;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 0.4rem;
+    vertical-align: middle;
+    background-color: #ff3b5c;
+    border-radius: 50%;
+    /* TODO 41: Make the red dot pulse like a "live" light: use the pulse animation, 1.5 seconds, ease-in-out, repeating forever (infinite). */
+}
+
+.hero-title {
+    max-width: 14em;
+    margin: 0 auto 1.25rem;
+    /* TODO 42: Make the big title use the --font-hero variable for its size. */
+    font-weight: 800;
+    line-height: 1.05;
+    text-transform: uppercase;
+    /* TODO 43: Make the title fade in while sliding up when the page loads: use fadeInUp, 0.8 seconds, ease-out, and the fill-mode "both". */
+    animation: fadeInUp .8s ease-in 2s both;
+}
+
+.hero-highlight {
+    display: inline-block;
+    padding: 0 0.15em;
+    /* TODO 44: Give the word "Zero" its background color using the --color-secondary variable. */
+    border: 3px solid #111111;
+    border-radius: 0.2em;
+    /* TODO 45: Make "Zero" look like a slapped-on sticker: rotate it -3 degrees AND slant it with skewX(-8deg). */
+}
+
+.hero-sub {
+    max-width: 36rem;
+    margin: 0 auto 2rem;
+    /* TODO 46: Make the intro text use the --font-lg variable for its size. */
+    color: #4a4458;
+    /* TODO 47: Make the intro text fade in AFTER the title: same fadeInUp animation (0.8s, ease-out, both) but with a 0.2 second delay. */
+}
+
+.hero-actions {
+    /* TODO 48: Make the button appear last: same fadeInUp animation (0.8s, ease-out, both) with a 0.4 second delay. */
+}
+
+.hero-visual {
+    position: relative;
+    margin-top: clamp(2.5rem, 6vw, 4rem);
+}
+
+.hero-image {
+    width: 100%;
+    border: 3px solid #111111;
+    border-width: 3px 8px 8px 3px;
+    border-radius: 28px;
+}
+
+.sticker {
+    position: absolute;
+    padding: 0.5rem 1rem;
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    font-size: clamp(0.75rem, 1.6vw, 1rem);
+    border: 3px solid #111111;
+    border-radius: 999px;
+    /* TODO 49: Make the stickers move smoothly when hovered: transition the transform over 0.3 seconds with ease. */
+}
+
+.sticker-1 {
+    top: -1.25rem;
+    left: 4%;
+    background-color: #c6f432;
+    /* TODO 50: Tilt the first sticker -8 degrees (rotate). */
+}
+
+.sticker-2 {
+    top: 62%;
+    right: 3%;
+    background-color: #ff6ec7;
+    /* TODO 51: Tilt the second sticker 6 degrees the other way. */
+}
+
+.sticker:hover {
+    /* TODO 52: When a sticker is hovered, straighten it (rotate 0deg) AND grow it to 115% (scale). Two transforms in one line. */
+}
+
+.scroll-indicator {
+    display: inline-block;
+    margin-top: 2.5rem;
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #111111;
+    text-decoration: none;
+    /* TODO 53: Make the "scroll" hint bob up and down: use the float animation, 2 seconds, ease-in-out, repeating forever. */
+}
+
+.drop-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    /* TODO 54: Set the space between the cards using the --space-lg variable. */
+}
+
+.drop-card {
+    /* TODO 55: Create a variable named --card-color INSIDE this rule (not in :root). Give it the value var(--color-surface). Only the cards can use it. */
+    padding: 1rem;
+    /* TODO 56: Give the card its background color using the --card-color variable. */
+    /* TODO 57: Give the card its outline using the --border variable (the whole shorthand in one word!). */
+    border-width: 3px 7px 7px 3px;
+    /* TODO 58: Round the card corners using the --radius variable. */
+    /* TODO 59: Make the card move smoothly on hover: transition the transform over 0.3 seconds with ease. */
+    /* TODO 60: Make every card fade in while sliding up when the page loads: fadeInUp, 0.6 seconds, ease-out, fill-mode both. */
+}
+
+.drop-card--pink {
+    /* TODO 61: Make this card pink by changing only its --card-color variable to var(--color-secondary). */
+}
+
+.drop-card--lime {
+    /* TODO 62: Make this card lime by changing only its --card-color variable to var(--color-primary). */
+}
+
+.drop-card:hover {
+    /* TODO 63: When a card is hovered, lift it 8px up AND tilt it -1 degree. */
+}
+
+.drop-image {
+    width: 100%;
+    /* TODO 64: The product pictures are all different shapes (tall, wide). Make every picture a perfect square. */
+    object-fit: cover;
+    margin-bottom: 0.9rem;
+    background-color: #ffffff;
+    border: 3px solid #111111;
+    border-radius: 12px;
+}
+
+.drop-image-top {
+    /* TODO 65: The bucket hat is at the top of its tall picture and the square crop cuts it off. Keep the TOP of the picture visible. */
+}
+
+.drop-name {
+    margin-bottom: 0.5rem;
+    font-size: 1.05rem;
+}
+
+.new-label {
+    display: inline-block;
+    margin-left: 0.3rem;
+    padding: 0.1rem 0.5rem;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 0.7rem;
+    vertical-align: middle;
+    color: #ffffff;
+    background-color: #111111;
+    border-radius: 999px;
+    /* TODO 66: Make the "New" label pulse to grab attention: REUSE the pulse animation, 2 seconds, ease-in-out, repeating forever. */
+}
+
+.drop-price {
+    display: inline-block;
+    padding: 0.2rem 0.8rem;
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    font-size: 1.2rem;
+    color: #ffffff;
+    background-color: #111111;
+    border-radius: 8px;
+}
+
+.lineup-list {
+    max-width: 760px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: #ffffff;
+    border: 3px solid #111111;
+    border-width: 3px 7px 7px 3px;
+    border-radius: 18px;
+}
+
+.lineup-row {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+}
+
+.lineup-time {
+    min-width: 5.5rem;
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    font-size: 0.9rem;
+}
+
+.lineup-act {
+    font-weight: 700;
+}
+
+.lineup-row:nth-child(even) {
+    /* TODO 67: Give every second row (2, 4) the --color-background color so the list looks striped. */
+}
+
+.lineup-row:not(:last-child) {
+    /* TODO 68: Put a 2px dashed line in the --color-text color under every row except the last one. */
+}
+
+.lineup-row:last-child {
+    /* TODO 69: The last row is the headliner. Give it the --color-primary background so it stands out. */
+}
+
+.spotlight-layout {
+    display: grid;
+    gap: 2rem;
+    align-items: start;
+}
+
+.spotlight-slot {
+    /* TODO 70: Make each spotlight slot a container that the card inside can ask about (measure its width only). */
+}
+
+.spotlight {
+    display: grid;
+    gap: 3px;
+    overflow: hidden;
+    background-color: #111111;
+    border: 3px solid #111111;
+    border-width: 3px 7px 7px 3px;
+    border-radius: 18px;
+}
+
+.spotlight-media {
+    overflow: hidden;
+}
+
+.spotlight-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* TODO 71: Make the vendor photos zoom smoothly: transition the transform over 0.4 seconds with ease. */
+}
+
+.spotlight-body {
+    padding: 1.5rem;
+    background-color: #ffffff;
+}
+
+.spotlight:hover .spotlight-image {
+    /* TODO 72: When a vendor card is hovered, zoom the photo inside it to 105%. */
+}
+
+.spotlight-title {
+    margin-bottom: 0.5rem;
+    /* TODO 73: Make the title size follow the size of its BOX (not the screen): never smaller than 1.25rem, grows with 7cqi, never bigger than 2.25rem. */
+}
+
+/* TODO 74: When the card's container is AT LEAST 520px wide, the card should switch to a side-by-side layout. Write a container query for that and put the next rule (.spotlight) inside it. */
+
+.spotlight {
+    /* TODO 75: Inside the container query: give the card 2 columns side by side, the image 1fr and the text 1.3fr. */
+}
+
+.zine {
+    width: 90%;
+    /* TODO 76: Long lines are hard to read. Make the article never wider than about 65 characters (use the ch unit). */
+    margin: 0 auto;
+}
+
+.zine-title {
+    margin-bottom: 1.5rem;
+    font-size: clamp(1.6rem, 4vw, 2.5rem);
+}
+
+.zine p {
+    margin-bottom: 1.25rem;
+}
+
+.zine-lead::first-letter {
+    /* TODO 77: Make the first letter a big "drop cap": first, float it to the left so the text wraps around it... */
+    /* TODO 78: ...then make it 3.5 times bigger than the paragraph text (3.5em). */
+    margin: 0.3rem 0.6rem 0 0;
+    padding: 0.3rem 0.55rem;
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    line-height: 1;
+    background-color: #c6f432;
+    border: 3px solid #111111;
+}
+
+.zine-quote {
+    position: relative;
+    margin: 2.5rem 0;
+    padding: 2rem;
+    font-size: 1.25rem;
+    font-style: italic;
+    background-color: #ffe14d;
+    border: 3px solid #111111;
+    border-radius: 18px;
+}
+
+.zine-quote::before {
+    /* TODO 79: Add a big decorative quote mark before the quote: give this pseudo-element the content “ (it will not appear without content). */
+    position: absolute;
+    top: -2.25rem;
+    left: 1rem;
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    font-size: 5rem;
+    font-style: normal;
+    line-height: 1;
+    color: #ff6ec7;
+}
+
+.recap-image {
+    width: 100%;
+    margin-top: 2rem;
+    border: 3px solid #111111;
+    border-radius: 18px;
+}
+
+.rsvp-form {
+    display: grid;
+    gap: 0.6rem;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border: 3px solid #111111;
+    border-width: 3px 8px 8px 3px;
+    border-radius: 18px;
+}
+
+.form-label {
+    font-weight: 700;
+}
+
+.form-input {
+    margin-bottom: 0.75rem;
+    padding: 0.85rem 1rem;
+    font-family: 'Space Grotesk', Arial, sans-serif;
+    font-size: 1rem;
+    background-color: #fff6e5;
+    border: 3px solid #111111;
+    border-radius: 12px;
+    /* TODO 80: Make the border color change smoothly when a field is focused, valid, or invalid: transition the border-color over 0.2 seconds with ease. */
+}
+
+.rsvp-form .button {
+    justify-self: start;
+}
+
+.form-input::placeholder {
+    /* TODO 81: Make the hint text inside the empty inputs (the placeholder) use the --color-muted variable. */
+}
+
+.form-input:valid {
+    /* TODO 82: When a field is filled in correctly (:valid), turn its border green using the --color-success variable. */
+}
+
+.form-input:focus {
+    /* TODO 83: While someone is typing in a field (:focus), make its border pink using the --color-secondary variable. */
+}
+
+.form-input:focus:invalid {
+    /* TODO 84: While someone is typing and the field is NOT valid yet (:focus AND :invalid), make the border red using the --color-error variable. */
+}
+
+.site-footer {
+    padding: 3rem 0 2rem;
+    color: #fff6e5;
+    background-color: #111111;
+}
+
+.footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-logo {
+    font-family: 'Unbounded', 'Arial Black', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #c6f432;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.footer-link {
+    position: relative;
+    font-weight: 700;
+    color: #fff6e5;
+    text-decoration: none;
+}
+
+.footer-link::after {
+    /* TODO 85: Create the underline: a pseudo-element only appears if it has content. Give it empty content (''). */
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 3px;
+    background-color: #c6f432;
+    /* TODO 86: Make the underline grow smoothly: transition the width over 0.3 seconds with ease. */
+}
+
+.footer-link:hover::after {
+    /* TODO 87: When a footer link is hovered, grow its underline to the full width of the link (100%). */
+}
+
+.footer-bottom {
+    width: 90%;
+    max-width: 1100px;
+    margin: 2rem auto 0;
+    padding-top: 1.25rem;
+    font-size: 0.875rem;
+    border-top: 2px dashed #fff6e5;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        /* TODO 88: HAMBURGER STEP 9 (tablet and desktop): There is room for all the links now. Hide the hamburger. */
+    }
+    .nav-menu {
+        /* TODO 89: Put the menu back into the normal flow inside the navbar (not floating). */
+        /* TODO 90: Always show the menu as a flex container (no click needed). */
+        /* TODO 91: Put the links side by side in a row. */
+        align-items: center;
+        gap: 1.75rem;
+        padding: 0;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+@media (min-width: 900px) {
+    .spotlight-layout {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* TODO 92: Some people get dizzy or sick from motion. Write a media query for users who asked their device to REDUCE motion, and put the next rule inside it. */
+
+*,
+*::before,
+*::after {
+    /* TODO 93: Reduced motion: make every animation finish almost instantly (0.01ms). Add !important so it beats every other rule. */
+    /* TODO 94: Reduced motion: play every animation only once (no infinite loops). Add !important. */
+    /* TODO 95: Reduced motion: make every transition (hover effects) happen almost instantly (0.01ms). Add !important. */
+}

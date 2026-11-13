@@ -1,0 +1,699 @@
+:root {
+    --color-black: #0c0c0d;
+    --color-panel: #17171a;
+    --color-line: #2c2c31;
+    --color-white: #f1f1ee;
+    --color-gray: #a5a5ab;
+    --color-red: #ff4433;
+    --color-film: #f2a33a;
+    --font-display: 'Barlow Condensed', 'Arial Narrow', sans-serif;
+    --font-body: 'Barlow', Arial, sans-serif;
+    --max-width: 75rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: 1.0625rem;
+    line-height: 1.6;
+    color: var(--color-white);
+    background-color: var(--color-black);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: inherit;
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-red);
+    outline-offset: 3px;
+}
+
+/* TODO C1 ✅ [Eyes]: These 4 rules repeat the same 4 lines. (Slide: CSS Best Practices, Combine Selectors) */
+h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    font-weight: 800;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* TODO C2 ✅ [Eyes]: 4 lines for one padding. (Slide: CSS Best Practices, Shorthand Properties) */
+.section {
+    padding: 6rem 0;
+}
+
+.section-head {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.section-title {
+    font-size: clamp(2.75rem, 7vw, 5.5rem);
+}
+
+.section-note,
+.kicker {
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-film);
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(12, 12, 13, 0.94);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem 2rem;
+    padding: 1rem 0;
+}
+
+.logo img {
+    width: 12.5rem;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.25rem 1.5rem;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    /* TODO C3 ✅ [Network]: Weight 500 downloads one more font file. Use a weight the page already loads. (Slide: Fix #4 - Too Many Font Weights) */
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--color-red);
+}
+
+.nav-book {
+    color: var(--color-red);
+}
+
+.menu-toggle,
+.hamburger {
+    display: none;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.95rem 1.6rem;
+    font-size: 0.9375rem;
+    /* TODO C4 ✅ [Network]: Same problem with 600. (Slide: Fix #4 - Too Many Font Weights) */
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color-black);
+    background-color: var(--color-red);
+    border: 2px solid var(--color-red);
+    border-radius: 0.25rem;
+}
+
+.btn:hover {
+    background-color: var(--color-white);
+    border-color: var(--color-white);
+}
+
+.btn-outline {
+    color: var(--color-white);
+    background-color: transparent;
+    border-color: var(--color-white);
+}
+
+.btn-outline:hover {
+    color: var(--color-black);
+}
+
+.hero {
+    display: grid;
+}
+
+.hero > * {
+    grid-area: 1 / 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 44rem;
+    object-fit: cover;
+    object-position: center 40%;
+}
+
+.hero-content {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 4rem;
+}
+
+.hero-title {
+    max-width: 16ch;
+    margin: 0.75rem 0 1.25rem;
+    font-size: clamp(3rem, 7vw, 6rem);
+}
+
+.hero-intro {
+    max-width: 34rem;
+    font-size: 1.1875rem;
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.viewfinder {
+    position: relative;
+    background-image: linear-gradient(to top, rgba(12, 12, 13, 0.96) 15%, rgba(12, 12, 13, 0.55) 55%, rgba(12, 12, 13, 0.1) 100%);
+}
+
+.viewfinder::before,
+.viewfinder::after {
+    content: "";
+    position: absolute;
+    width: 3.5rem;
+    height: 3.5rem;
+    border: 2px solid rgba(241, 241, 238, 0.75);
+}
+
+.viewfinder::before {
+    top: 2rem;
+    left: 2rem;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.viewfinder::after {
+    right: 2rem;
+    bottom: 2rem;
+    border-left: 0;
+    border-top: 0;
+}
+
+.readout {
+    position: absolute;
+    top: 3rem;
+    right: 3.25rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 1.5rem;
+}
+
+.shot {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.shot img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+
+.shot-featured {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.shot-featured img {
+    flex: 1;
+    min-height: 0;
+    aspect-ratio: auto;
+}
+
+.select {
+    position: absolute;
+    top: 1.25rem;
+    left: 1.25rem;
+    padding: 0.35rem 1rem;
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 1;
+    text-transform: uppercase;
+    color: var(--color-red);
+    background-color: rgba(12, 12, 13, 0.8);
+    border: 3px solid var(--color-red);
+    border-radius: 50%;
+    transform: rotate(-8deg);
+}
+
+figcaption {
+    font-size: 0.9375rem;
+    color: var(--color-gray);
+}
+
+/* TODO C5 ✅ [Eyes]: The browser checks 7 steps to find these spans, and they already have a class. (Slide: CSS Optimization - Write Efficient Selectors) */
+.frame {
+    margin-right: 0.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: var(--color-film);
+}
+
+.stats {
+    background-color: var(--color-panel);
+    border-top: 1px solid var(--color-line);
+    border-bottom: 1px solid var(--color-line);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.stat {
+    padding: 2.75rem 2rem;
+    color: var(--color-gray);
+    border-left: 1px solid var(--color-line);
+}
+
+.stat:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 8vw, 6rem);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--color-white);
+}
+
+.post-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem 2rem;
+}
+
+.post {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.post img {
+    border-radius: 0.25rem;
+}
+
+.post-date {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.post-title {
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+}
+
+.post p {
+    color: var(--color-gray);
+}
+
+.post .post-date {
+    color: var(--color-film);
+}
+
+.post-link {
+    margin-top: auto;
+    font-weight: 700;
+    color: var(--color-red);
+}
+
+.rates-section {
+    border-top: 1px solid var(--color-line);
+}
+
+.rates {
+    /* TODO C6 ✅ [Device mode]: Do H1 first. Phone view: the whole page scrolls sideways. This box is wider than a phone. (Slide: Mobile-First Indexing) */
+    width: 100%;
+    list-style: none;
+}
+
+.rate {
+    display: grid;
+    grid-template-columns: 16rem 1fr auto;
+    gap: 2rem;
+    align-items: baseline;
+    padding: 1.75rem 0;
+    border-bottom: 1px solid var(--color-line);
+}
+
+.rate-name {
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.rate-desc {
+    max-width: 34rem;
+    color: var(--color-gray);
+}
+
+.rate-price {
+    font-family: var(--font-display);
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    color: var(--color-red);
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-photo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.portrait {
+    width: 100%;
+    border-radius: 0.25rem;
+}
+
+.about-text .section-title {
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    max-width: 38rem;
+    font-size: 1.1875rem;
+}
+
+.about-text p + p {
+    margin-top: 1rem;
+}
+
+/* TODO C7 ✅ [Eyes]: Text the same color as the page. Who is it for? Fix it together with H31. (Slide: Common SEO Mistakes to Avoid) */
+
+/* TODO C8 ✅ [Network]: Every screen, even a phone, downloads this 4.8 MB photo. Three smaller copies are waiting in images/. (Slide: Responsive CSS Background Images) */
+.booking {
+    padding: 8rem 0;
+    background-color: var(--color-black);
+    background-image: url('images/booking-large.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+@media (max-width: 64rem) {
+    .booking {
+        background-image: url('images/booking-medium.webp');
+    }
+}
+
+@media (max-width: 37.5rem) {
+    .booking {
+        background-image: url('images/booking-small.webp');
+    }
+}
+
+.booking-box {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 3rem;
+    text-align: center;
+    background-color: rgba(12, 12, 13, 0.86);
+}
+
+.booking-title {
+    font-size: clamp(2.75rem, 7vw, 5rem);
+}
+
+.booking-box p {
+    margin: 1rem 0 2rem;
+    font-size: 1.1875rem;
+}
+
+.site-footer {
+    padding: 4rem 0 2.5rem;
+    border-top: 1px solid var(--color-line);
+}
+
+.footer-mark {
+    font-family: var(--font-display);
+    font-size: clamp(3.5rem, 18vw, 15.5rem);
+    font-weight: 800;
+    line-height: 0.85;
+    text-transform: uppercase;
+}
+
+.footer-cols {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.footer-heading {
+    margin-bottom: 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-film);
+}
+
+.footer-list {
+    display: grid;
+    gap: 0.4rem;
+    list-style: none;
+}
+
+.footer-list a {
+    text-decoration: none;
+}
+
+.footer-list a:hover {
+    color: var(--color-red);
+}
+
+.credits {
+    margin-top: 3rem;
+    font-size: 0.875rem;
+    color: var(--color-gray);
+}
+
+/* TODO C9 ✅ [Coverage]: Coverage tab (DevTools ⋮ > More tools > Coverage), then reload. Every rule from here down to the first @media is red: nothing on the page uses it. (Slide: Remove Unused CSS) */
+
+@media (max-width: 64rem) {
+    .hero-img {
+        height: 38rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .shot-featured {
+        grid-row: span 1;
+    }
+
+    .shot-featured img {
+        aspect-ratio: 3 / 2;
+    }
+
+    .rate {
+        grid-template-columns: 11rem 1fr auto;
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1rem;
+        right: 5%;
+        width: 3rem;
+        height: 3rem;
+        margin: 0;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.3125rem;
+        width: 3rem;
+        height: 3rem;
+        border: 2px solid var(--color-line);
+        border-radius: 0.25rem;
+    }
+
+    .hamburger span {
+        display: block;
+        width: 1.625rem;
+        height: 0.1875rem;
+        background-color: var(--color-white);
+        transition: transform 0.3s ease;
+    }
+
+    .menu-toggle:focus-visible + .hamburger {
+        outline: 3px solid var(--color-red);
+        outline-offset: 3px;
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: translateY(0.5rem) rotate(45deg);
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        transform: scale(0);
+    }
+
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: translateY(-0.5rem) rotate(-45deg);
+    }
+
+    .nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+        padding: 0.75rem 5% 1.75rem;
+        background-color: var(--color-black);
+        border-bottom: 1px solid var(--color-line);
+    }
+
+    .menu-toggle:checked ~ .nav {
+        display: flex;
+    }
+
+    .nav-link {
+        padding: 0.5rem 0;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 37.5rem) {
+    .section {
+        padding: 4rem 0;
+    }
+
+    .hero-img {
+        height: 40rem;
+    }
+
+    .hero-content {
+        padding-bottom: 3rem;
+    }
+
+    .viewfinder::before {
+        top: 1rem;
+        left: 1rem;
+    }
+
+    .viewfinder::after {
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    .readout {
+        display: none;
+    }
+
+    .gallery,
+    .post-grid,
+    .footer-cols,
+    .stats-grid,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .shot-featured {
+        grid-column: span 1;
+    }
+
+    .stat {
+        padding: 1.75rem 0;
+        border-left: 0;
+        border-top: 1px solid var(--color-line);
+    }
+
+    .stat:first-child {
+        border-top: 0;
+    }
+
+    .rate {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .booking {
+        padding: 5rem 0;
+    }
+
+    .booking-box {
+        padding: 2rem 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hamburger span {
+        transition: none;
+    }
+}

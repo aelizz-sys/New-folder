@@ -1,0 +1,54 @@
+/* RESET */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+h2 {
+    color: brown;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+body {
+
+}
+
+#main-content {
+
+}
+
+ul > li a {
+    color: aqua
+    font-size: 50px;
+}
+
+ul > li a:hover {
+    color:rgb(0, 163, 163)
+}
+ul > li a:active {
+    color: rgb(218, 108, 17)
+    text-decoration: none;
+}
+
+
+form input[type="name"] {
+
+}
+
+ul a[href^=".pdf"] {
+
+}
+
+ul a[href$=".pdf"] {
+
+}
+
+ul a[href*="resume"] {
+
+}
+
+header {
+    
+}

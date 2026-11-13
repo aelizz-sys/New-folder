@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Night Owl Coffee | Open Late for Students</title>
+
+    <!-- STEP 1: Google Fonts (Poppins for headings + Inter for body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Varela+Round&display=swap" rel="stylesheet">
+
+    <!-- STEP 2: Our stylesheet (AFTER the Google Fonts links) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== HEADER + NAVBAR: logo left, links middle, button right ========== -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#" class="logo">Night Owl <span class="logo-accent">Coffee</span></a>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#menu" class="nav-link">Menu</a></li>
+                <li class="nav-item"><a href="#story" class="nav-link">Our Story</a></li>
+                <li class="nav-item"><a href="#reviews" class="nav-link">Reviews</a></li>
+            </ul>
+
+            <a href="#visit" class="nav-button">Find Us</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO: everything centered ========== -->
+        <section class="hero">
+            <p class="hero-kicker">Open until 2 a.m., every night</p>
+            <h1 class="hero-title">Coffee for the Late-Night Thinkers</h1>
+            <p class="hero-text">Strong coffee, quiet tables, and fast Wi-Fi for students who do their best work after dark.</p>
+
+            <p class="hero-actions">
+                <a href="#menu" class="button button-primary">See the Menu</a>
+                <a href="#visit" class="button button-outline">Plan a Visit</a>
+            </p>
+
+            <ul class="quick-facts">
+                <li class="fact"><strong class="fact-number">24</strong> <span class="fact-label">study seats</span></li>
+                <li class="fact"><strong class="fact-number">2 a.m.</strong> <span class="fact-label">last call</span></li>
+                <li class="fact"><strong class="fact-number">7</strong> <span class="fact-label">nights a week</span></li>
+            </ul>
+        </section>
+
+        <!-- ========== MENU: cards in a row that wrap ========== -->
+        <section id="menu" class="menu">
+            <h2 class="section-title">Tonight's Menu</h2>
+            <p class="section-intro">Every drink is made to order. Refills on drip coffee are free after 10 p.m.</p>
+
+            <ul class="menu-list">
+                <li class="menu-card">
+                    <p class="menu-tag">Best Seller</p>
+                    <h3 class="menu-name">Midnight Mocha</h3>
+                    <p class="menu-desc">Dark chocolate, a double shot of espresso, and steamed milk. Our most-ordered drink after 10 p.m.</p>
+                    <p class="menu-price"><span class="price-amount">$4.75</span> <span class="price-unit">/ 12 oz</span></p>
+                </li>
+                <li class="menu-card">
+                    <h3 class="menu-name">Study Break Cold Brew</h3>
+                    <p class="menu-desc">Steeped for 18 hours. Smooth, strong, and served over big ice cubes.</p>
+                    <p class="menu-price"><span class="price-amount">$4.25</span> <span class="price-unit">/ 16 oz</span></p>
+                </li>
+                <li class="menu-card">
+                    <h3 class="menu-name">Owl's Oat Latte</h3>
+                    <p class="menu-desc">Espresso with oat milk and a touch of honey.</p>
+                    <p class="menu-price"><span class="price-amount">$4.50</span> <span class="price-unit">/ 12 oz</span></p>
+                </li>
+                <li class="menu-card">
+                    <h3 class="menu-name">Finals Week Fuel</h3>
+                    <p class="menu-desc">A triple shot with a splash of cream, for the longest nights of the semester.</p>
+                    <p class="menu-price"><span class="price-amount">$3.95</span> <span class="price-unit">/ 8 oz</span></p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ========== STORY: image and text side by side ========== -->
+        <section id="story" class="story">
+            <article class="story-block">
+                <figure class="story-figure">
+                    <img src="images/coffee-cup.svg" alt="Illustration of a steaming coffee cup under a night sky" class="story-image">
+                    <figcaption class="story-caption">Our first mocha, made on a borrowed espresso machine.</figcaption>
+                </figure>
+                <div class="story-text">
+                    <h2 class="section-title section-title-left">Started by Two Night-Shift Students</h2>
+                    <p>Night Owl began in 2019, when two graduate students got tired of studying in parking lots after the library closed. They rented a tiny room near campus, bought a used espresso machine, and stayed open until 2 a.m.</p>
+                    <p>Seven years later, the room is bigger, the machine is new, and the promise is the same: good coffee and a calm place to think, long after everywhere else has closed.</p>
+                </div>
+            </article>
+
+            <article class="story-block story-block-reverse">
+                <figure class="story-figure">
+                    <img src="images/study-room.svg" alt="Illustration of a desk with a laptop, a lamp, books, and a mug" class="story-image">
+                    <figcaption class="story-caption">The back room is our quiet zone: no calls, just focus.</figcaption>
+                </figure>
+                <div class="story-text">
+                    <h2 class="section-title section-title-left">A Room Built for Focus</h2>
+                    <p>The back room has 24 seats, an outlet at every table, and warm desk lamps instead of bright ceiling lights. Phone calls happen out front, so the back stays quiet.</p>
+                    <p>During finals week we add extra tables, open an hour later, and keep a free snack basket by the door. You bring the notes, we bring the caffeine.</p>
+                </div>
+            </article>
+        </section>
+
+        <!-- ========== REVIEWS: avatar next to each quote ========== -->
+        <section id="reviews" class="reviews">
+            <h2 class="section-title section-title-light">What Students Say</h2>
+
+            <ul class="review-list">
+                <li class="review">
+                    <span class="review-avatar" aria-hidden="true">JM</span>
+                    <blockquote class="review-quote">
+                        <p class="review-text">"I wrote half of my thesis at the corner table. The staff never rushes you."</p>
+                        <cite class="review-author">Jordan M., Architecture</cite>
+                    </blockquote>
+                </li>
+                <li class="review">
+                    <span class="review-avatar" aria-hidden="true">AR</span>
+                    <blockquote class="review-quote">
+                        <p class="review-text">"Best cold brew in town, and the outlets actually work."</p>
+                        <cite class="review-author">Aisha R., Nursing</cite>
+                    </blockquote>
+                </li>
+                <li class="review">
+                    <span class="review-avatar" aria-hidden="true">DK</span>
+                    <blockquote class="review-quote">
+                        <p class="review-text">"It is calm at midnight in a way the library never is. This is my second home during finals."</p>
+                        <cite class="review-author">Daniel K., Computer Science</cite>
+                    </blockquote>
+                </li>
+            </ul>
+        </section>
+
+
+
+    <!-- ========== FOOTER: three columns that wrap ========== -->
+    <footer id="visit" class="site-footer">
+        <section class="footer-col">
+            <h2 class="footer-heading">Night Owl Coffee</h2>
+            <p class="footer-text">Strong coffee and quiet tables for students who work after dark.</p>
+        </section>
+
+        <section class="footer-col">
+            <h2 class="footer-heading">Visit Us</h2>
+            <address class="footer-address">
+                1204 Campus Avenue, Suite B<br>
+                Across from the Library<br>
+                <a href="tel:+15550142020" class="footer-link">(555) 014-2020</a>
+            </address>
+        </section>
+
+        <section class="footer-col">
+            <h2 class="footer-heading">Hours</h2>
+            <ul class="hours-list">
+                <li class="hours-row"><span class="hours-day">Mon to Thu</span> <span class="hours-time">7 a.m. to 2 a.m.</span></li>
+                <li class="hours-row"><span class="hours-day">Fri to Sat</span> <span class="hours-time">7 a.m. to 3 a.m.</span></li>
+                <li class="hours-row"><span class="hours-day">Sunday</span> <span class="hours-time">9 a.m. to midnight</span></li>
+            </ul>
+        </section>
+
+        <p class="footer-bottom">&copy; 2026 Night Owl Coffee. A practice page for Introduction to Web Design: Flexbox.</p>
+    </footer>
+    </main>
+
+</body>
+</html>

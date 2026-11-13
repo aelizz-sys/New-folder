@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+</head>
+
+<body>
+    <form action="/submit" method="GET">
+        <fieldset>
+            <legend>Contact Information</legend>
+
+            <label for="name">Name:</label>
+        <input type="name"
+            id="name"
+            name="name"
+            placeholder="Your Full Name..."
+            required>
+
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" 
+            autocomplete="email"
+            name="email" id="email" placeholder="Enter your email..." required>
+
+        <br>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" 
+            name="phone" id="phone" placeholder="Enter your phone..."
+            max="10">
+        </fieldset>
+
+        <br>
+        <label for="service">Select a Service:</label>
+        <select name="service" id="service">
+            <option value="">-SELECT ONE-</option>
+            <option value="art">Art Direction</option>
+            <option value="brand">Brand Film</option>
+            <option value="colour">Colour Finish</option>
+        </select>
+
+        <br>
+        <fieldset>
+            <legend>Budget range</legend>
+            <input type="radio" name="budget" id="budget-1">
+            <label for="budget-1">Under $5k:</label>
+            <input type="radio" name="budget" id="budget-2">
+            <label for="budget-2">$5k:</label>
+            <input type="radio" name="budget" id="budget-3">
+            <label for="budget-3">$15k:</label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Which extras do you need?</legend>
+            <input type="checkbox" name="extras" id="extra-editing">
+            <label for="extra-editing">Photo Editing</label>
+            <input type="checkbox" name="extras" id="extra-smm">
+            <label for="extra-smm">Social Media Management</label>
+            <input type="checkbox" name="extras" id="extra-prints">
+            <label for="extra-prints">Printed Photographs</label>
+        </fieldset>
+
+        <label for="date">Ideal shoot date</label>
+        <input type="date" id="date" name="date">
+
+
+
+
+        <br>
+        <label for="message">Message:</label>
+        <textarea 
+            name="message" 
+            id="message" 
+            rows="4"
+            placeholder="Enter your message here...">
+        </textarea>
+
+        <br>
+        <label for="upload">Upload your photo:</label></br>
+        <input type="file" name="upload" id="upload">
+
+        <label for="pass">Enter your password:</label>
+        <input type="password" name="pass" id="pass">
+
+        <br>
+        <button type="submit">Send</button>
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,229 @@
+FOCAL — HOME PAGE COPY
+CMI 3315 demo project. All text from the mockup, in page order.
+Paste from here during the build so class time goes to code, not typing.
+
+
+====================================================================
+NAV
+====================================================================
+
+Logo:        FOCAL
+Links:       Home | Work | Studio | Contact
+Nav button:  Start a Project
+
+
+====================================================================
+HERO
+====================================================================
+
+Eyebrow:  CREATIVE STUDIO · LUBBOCK, TX
+
+Heading:  Make Something Worth Watching
+
+Body:
+FOCAL is a creative studio working in photography, film and campaign
+design. We make the work that makes people stop scrolling — and we do
+it without the agency overhead.
+
+Button 1 (filled):   See the Work →
+Button 2 (outline):  Start a Project
+
+Image caption:  Sunbelt Roasters — brand film, March 2026
+
+
+====================================================================
+ABOUT
+====================================================================
+
+Eyebrow:  ABOUT FOCAL
+
+Heading:  Where Craft Meets Deadline
+
+Body:
+FOCAL is a three-person studio in a converted print shop on Broadway
+Avenue. We shoot, cut, grade and art direct for brands, bands and
+businesses who would rather look like themselves than like everybody
+else.
+
+Stat cards:
+  240+   PROJECTS DELIVERED
+  18+    INDUSTRY AWARDS
+  7+     YEARS IN LUBBOCK
+
+Button:  More About FOCAL →
+
+
+====================================================================
+LATEST WORK
+====================================================================
+
+Eyebrow:  FEATURED
+Heading:  Latest Work
+
+--- Card 1 ---
+Image tag:  BRAND FILM
+Meta:       MOTION · 2026
+Title:      Sunbelt Roasters
+Text:       Three minutes on a family roastery that has been open on the
+            same corner since 1974.
+
+--- Card 2 ---
+Image tag:  PHOTOGRAPHY
+Meta:       CAMPAIGN · 2026
+Title:      Caprock Provisions
+Text:       Forty-one product frames in two days, shot on a kitchen table
+            with one window.
+
+--- Card 3 ---
+Image tag:  ART DIRECTION
+Meta:       POSTER SERIES · 2025
+Title:      The Blue Light Sessions
+Text:       Fourteen gig posters, screen printed, two inks each, one very
+            patient venue.
+
+Button:  View All Projects →
+
+
+====================================================================
+SHOWREEL
+====================================================================
+
+Eyebrow:  BEHIND THE LENS
+Heading:  The 2026 Showreel
+
+Caption 1 (native <video>):  Thirty-second cut. The full reel is on Vimeo below.
+Caption 2 (embedded iframe): The full reel, hosted on Vimeo.
+
+
+====================================================================
+THE FOCAL METHOD
+====================================================================
+
+Eyebrow:  HOW IT WORKS
+Heading:  The FOCAL Method
+
+Intro:
+Four weeks from first call to final delivery. No deck, no discovery
+phase, no invoice surprises.
+
+--- 01 ---
+Title:  Listen
+Text:   A ninety-minute call. What are you actually selling, and to whom.
+        We take notes, you do most of the talking.
+Pill:   WEEK ONE
+
+--- 02 ---
+Title:  Frame
+Text:   Treatment, references, shot list, budget. You approve every line
+        before anybody books a van.
+Pill:   WEEK TWO
+
+--- 03 ---
+Title:  Make
+Text:   One to three shoot days. You are welcome on set, encouraged to
+        bring snacks, and asked to bring one decision-maker rather than
+        a committee.
+Pill:   WEEK THREE
+
+--- 04 ---
+Title:  Finish
+Text:   Selects, retouch, grade, delivery in every format you need. Two
+        revision rounds included, a third if we got something wrong.
+Pill:   WEEK FOUR
+
+
+====================================================================
+TESTIMONIALS
+====================================================================
+
+Eyebrow:  TESTIMONIALS
+Heading:  What Clients Say
+
+--- Card 1 ---
+Stars:  ★★★★★
+Quote:  "They shot our entire spring line in two days and somehow made a
+        bag of coffee look like it belonged in a museum."
+Avatar: MV
+Name:   Marisol Vega
+Role:   Brand Lead, Caprock Provisions
+
+--- Card 2 ---
+Stars:  ★★★★★
+Quote:  "You did not make us look like a coffee brand. You made us look
+        like ourselves, which is the thing we could never figure out how
+        to do."
+Avatar: RD
+Name:   Ray Delgado
+Role:   Owner, Sunbelt Roasters
+
+--- Card 3 ---
+Stars:  ★★★★★
+Quote:  "Fourteen posters in three weeks, and every single one of them
+        ended up on somebody's wall. That has never happened to us
+        before."
+Avatar: JT
+Name:   June Tran
+Role:   Booker, The Blue Light
+
+
+====================================================================
+CLOSING CTA
+====================================================================
+
+Heading:  Ready to Make Something Good?
+
+Body:
+Tell us what you are making. We will tell you honestly whether we are
+the right studio for it — and if we are not, we will point you at
+somebody who is.
+
+Button:  Start a Project →
+
+
+====================================================================
+FOOTER
+====================================================================
+
+Brand:    FOCAL
+Tagline:  A creative studio for photography, film and campaigns.
+
+Address:
+1108 Broadway Ave, Suite 3
+Lubbock, TX 79401
+(806) 555-0148
+hello@focalstudio.example.com
+
+Column: EXPLORE
+  Home
+  Work
+  Studio
+  Contact
+  Style Guide
+
+Column: SERVICES
+  Photography
+  Brand Film
+  Art Direction
+  Colour & Finish
+
+Column: FOLLOW
+  Instagram
+  Vimeo
+  Behance
+  Social icons: IG · VM · BE · IN
+
+Bottom left:   © 2026 FOCAL Studio. All frames our own.
+Bottom right:  Built by hand for CMI 3315 · Set in Archivo & Inter
+
+
+====================================================================
+NOTES
+====================================================================
+
+- Arrows on buttons are the character → (&rarr;).
+- Curly quotes in testimonials: " and " (&ldquo; / &rdquo;), apostrophe
+  is ' (&rsquo;).
+- Em dashes appear in the hero body, the hero caption and the closing
+  CTA: — (&mdash;).
+- Stars are ★ (&#9733;).
+- The middle dot in eyebrows and the footer bar is · (&middot;).

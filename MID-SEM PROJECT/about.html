@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked | Literary News</title>
+
+    <!-- STEP 1: Google Fonts (Special Elite for headings + Cutive Mono for body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
+
+    <!-- STEP 2: Our stylesheet (AFTER the Google Fonts links) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== HEADER: sticky + hamburger menu  ========== -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#top" class="logo">BOOKED</a>
+
+            <!-- The hidden checkbox  -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+
+            <!-- The hamburger icon is a LABEL-->
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </label>
+
+            <!-- The menu -->
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="article.html" class="nav-link">Articles</a></li>
+                <li><a href="booked-tbr.html" class="nav-link">Booked' TBR</a></li>
+                <li><a href="join.html" class="nav-link">Join</a></li>
+                <li><a href="home.html" class="nav-link nav-link-cta">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+            <article class="about-block">
+                <figure class="about-figure">
+                    <img src="images/about.webp" alt="Image of an open book with a red leaf on the page" class="about-image">
+                </figure>
+                <div class="about-text">
+                    <h2 class="section-title section-title-left">Started by Abygail Elizondo to share literary culture with others.</h2>
+                    <p>Booked began in 2026 for individuals who want a reliable place to get literary news and share their interest of books.</p>
+                    <p>We hope to grow our newsletter and introduce people to books from all over the world, bridging culture and literature.</p>
+                </div>
+            </article>
+            
+    <!-- ========== FOOTER: columns that wrap + a full-width bottom line ========== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <section class="footer-col">
+                <h2 class="footer-heading">Booked!</h2>
+                <p class="footer-text">Giving you the latest literary news on books.</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Contact</h2>
+                <p class="footer-text">BookedLit@gmail.com.</p>
+                <p class="footer-text">806-400-2000.</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Follow Us</h2>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Fable</a></li>
+                    <li><a href="#" class="footer-link">Club Newsletter</a></li>
+                </ul>
+            </section>
+
+            <p class="footer-bottom">&copy; 2026 Booked!</p>
+        </div>
+    </footer>
+
+    </main>
+</body>
+</html>

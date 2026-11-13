@@ -1,0 +1,483 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #2a2740;
+    background-color: #faf7f2;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    line-height: 1.2;
+}
+
+ul {
+    list-style: none;
+}
+
+.section-title {
+    font-size: 2.25rem;
+    text-align: center;
+    color: #1e1b3a;
+    margin-bottom: 0.75rem;
+}
+
+.section-title-left {
+    text-align: left;
+}
+
+.section-title-light {
+    color: #ffffff;
+}
+
+.section-intro {
+    max-width: 36rem;
+    margin: 0 auto 3rem;
+    text-align: center;
+    color: #5a5670;
+}
+
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #15132b;
+}
+
+.navbar {
+    /* TODO 1: The logo, links, and button are stacked on top of each other. Put them side by side in one row. */
+    display: flex;
+    /* TODO 2: Everything is crowded on the left. Push the logo to the far left and the button to the far right. */
+    justify-content: space-between;
+    /* TODO 3: The logo, links, and button are not lined up in the middle of the bar. Center them vertically. */
+    align-items: center;
+    /* TODO 4: Make the window narrow: the items get squeezed. Let them move to a new line instead. */
+    flex-wrap: wrap;
+    /* TODO 5: When the items move to a new line, they touch each other. Add 1rem of space between them. */
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+}
+
+.logo {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-decoration: none;
+    flex-wrap: wrap;
+}
+
+.logo-accent {
+    color: #ffb347;
+}
+
+.nav-links {
+    /* TODO 6: The three links are stacked on top of each other. Put them in a row. */
+    display: flex;
+    flex-direction: row;
+    /* TODO 7: The links are glued together. Add 1.75rem of space between them. */
+    gap: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.nav-link {
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #e8e4ff;
+    text-decoration: none;
+}
+
+.nav-button {
+    padding: 0.6rem 1.25rem;
+    font-weight: 600;
+    color: #1e1b3a;
+    background-color: #ffb347;
+    text-decoration: none;
+    border-radius: 2rem;
+}
+
+.hero {
+    /* TODO 8: We want full control over the hero layout. Make the hero a flex container (watch what happens!). */
+    display: flex;
+    /* TODO 9: Oops, everything jumped into one row! Stack the hero items back on top of each other. */
+    flex-direction: column; 
+    /* TODO 10: The content is stuck at the top of the tall hero. Center it from top to bottom. */
+    justify-content: center;
+    /* TODO 11: The facts strip is stuck on the left side. Center all the hero items from left to right. */
+    align-items: center;
+    min-height: 80vh;
+    padding: 4rem 1.5rem;
+    text-align: center;
+    color: #ffffff;
+    background-color: #1e1b3a;
+}
+
+.hero-kicker {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #ffb347;
+    margin-bottom: 1rem;
+}
+
+.hero-title {
+    max-width: 44rem;
+    font-size: 3.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.hero-text {
+    max-width: 34rem;
+    font-size: 1.125rem;
+    color: #cfcaf2;
+    margin-bottom: 2rem;
+}
+
+.hero-actions {
+    /* TODO 12: The two buttons are just inline links. Make the button group a flex container. */
+    display: flex;
+    /* TODO 13: Make sure the buttons always stay centered in their row. */
+    justify-content: center;
+    /* TODO 14: On a very narrow screen the buttons get squeezed. Let the second button move to a new line. */
+    flex-wrap: wrap;
+    /* TODO 15: The two buttons are touching. Add 1rem of space between them. */
+    gap: 1rem;
+    margin-bottom: 3.5rem;
+}
+
+.button {
+    padding: 0.875rem 1.75rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 2rem;
+}
+
+.button-primary {
+    color: #1e1b3a;
+    background-color: #ffb347;
+    border: 2px solid #ffb347;
+}
+
+.button-outline {
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.quick-facts {
+    /* TODO 16: The three facts are stacked on top of each other. Put them in a row. */
+    display: flex;
+    /* TODO 17: The facts are crowded on the left. Spread them out with EQUAL space around and between them. */
+    justify-content: space-between;
+    /* TODO 18: On small screens the facts get squeezed. Let them move to a new line. */
+    flex-wrap: wrap;
+    /* TODO 19: The facts can get too close together. Keep at least 2rem of space between them. */
+    gap: 2rem;
+    width: 100%;
+    max-width: 44rem;
+    padding-top: 2rem;
+    border-top: 1px solid #3a3566;
+}
+
+.fact {
+    /* TODO 20: Each fact needs its own layout (a layout inside a layout!). Make each fact a flex container. */
+    display: flex;
+    /* TODO 21: The number and the label are side by side. Put the number on top and the label below it. */
+    flex-direction: column;
+    /* TODO 22: Center the number and the label on each other. */
+    align-items: center;
+}
+
+.fact-number {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 2rem;
+    color: #ffb347;
+}
+
+.fact-label {
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #cfcaf2;
+}
+
+.menu {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 5rem 1.5rem;
+}
+
+.menu-list {
+    /* TODO 23: The menu cards are stacked on top of each other. Put them in a row. */
+    display: flex;
+    /* TODO 24: Make the window narrow: the cards get crushed into one line. Let them move to a new row when there is no room. */
+    flex-wrap: wrap;
+    /* TODO 25: The cards are touching. Add 1.5rem of space between them (in both directions). */
+    gap: 1rem;
+}
+
+.menu-card {
+    /* TODO 26: The cards are all different widths. Make each card start at 220px and share the extra space equally. */
+    display: flex;
+    flex: 1 1 220px;
+    /* TODO 27: We want control over the layout INSIDE each card. Make each card a flex container (watch what happens!). */
+    flex: 1 1 220px;
+    flex-direction: column;
+    /* TODO 28: Oops, the tag, name, description, and price jumped side by side! Stack them back on top of each other. */
+    padding: 1.75rem;
+    background-color: #ffffff;
+    border: 1px solid #ece6db;
+    border-top: 5px solid #ffb347;
+    border-radius: 12px;
+}
+
+.menu-tag {
+    /* TODO 29: The "Best Seller" tag stretches across the whole card. Make ONLY the tag as wide as its text. */
+    align-self: flex-start;
+    padding: 0.2rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #1e1b3a;
+    background-color: #ffe3b8;
+    border-radius: 2rem;
+    margin-bottom: 0.75rem;
+}
+
+.menu-name {
+    font-size: 1.25rem;
+    color: #1e1b3a;
+    margin-bottom: 0.5rem;
+}
+
+.menu-desc {
+    /* TODO 30: The prices sit at different heights in each card. Push every price to the bottom of its card. */
+    font-size: 0.9375rem;
+    color: #5a5670;
+    margin-bottom: 1.25rem;
+}
+
+.menu-price {
+    /* TODO 31: The price and the unit need their own layout. Make the price line a flex container. */
+    /* TODO 32: "$4.75" and "/ 12 oz" are different sizes and do not sit on the same line. Line up the bottoms of their letters. */
+    /* TODO 33: The price and the unit are glued together. Add 0.35rem of space between them. */
+}
+
+.price-amount {
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1e1b3a;
+}
+
+.price-unit {
+    font-size: 0.875rem;
+    color: #8a86a0;
+}
+
+.story {
+    padding: 5rem 1.5rem;
+    background-color: #ffffff;
+}
+
+.story-block {
+    /* TODO 34: The image is on top of the text. Put the image and the text side by side. */
+    /* TODO 35: On small screens the image and text get squeezed. Let the text move to a new line under the image. */
+    /* TODO 36: The image and the text are stretched to the same height. Line them up at the TOP instead. */
+    /* TODO 37: The image and the text are touching. Add 3rem of space between them. */
+    max-width: 1000px;
+    margin: 0 auto 5rem;
+}
+
+.story-block-reverse {
+    /* TODO 38: Both stories have the image on the LEFT. Move the image to the RIGHT in this story WITHOUT changing the HTML. */
+    margin-bottom: 0;
+}
+
+.story-figure {
+    /* TODO 39: The image column has no proper size. Make it start at 280px and share the extra space. */
+    /* TODO 40: The image sits at the top next to the text. Center ONLY the image vertically next to the text. */
+}
+
+.story-image {
+    display: block;
+    width: 100%;
+    border-radius: 16px;
+}
+
+.story-caption {
+    font-size: 0.8125rem;
+    color: #8a86a0;
+    margin-top: 0.5rem;
+}
+
+.story-text {
+    /* TODO 41: The text needs more room than the image. Make it start at 320px and take TWICE as much extra space as the image. */
+}
+
+.story-text p {
+    color: #5a5670;
+    margin-bottom: 1rem;
+}
+
+.reviews {
+    padding: 5rem 1.5rem;
+    background-color: #1e1b3a;
+}
+
+.review-list {
+    /* TODO 42: The review cards are stacked on top of each other. Put them in a row. */
+    /* TODO 43: On small screens the review cards get squeezed. Let them move to a new line. */
+    /* TODO 44: The review cards are touching. Add 1.5rem of space between them. */
+    max-width: 1100px;
+    margin: 2.5rem auto 0;
+}
+
+.review {
+    /* TODO 45: The review cards are all different widths. Make each card start at 300px and share the extra space equally. */
+    /* TODO 46: The avatar sits on top of the quote. Put the avatar and the quote side by side. */
+    /* TODO 47: Make sure the avatar stays at the TOP, next to the first line of the quote. */
+    /* TODO 48: The avatar and the quote are touching. Add 1rem of space between them. */
+    padding: 1.5rem;
+    background-color: #2a2650;
+    border-radius: 12px;
+}
+
+.review-avatar {
+    /* TODO 49: On narrow screens, long quotes can squeeze the circle into an oval. Make sure the circle NEVER gets squeezed. */
+    /* TODO 50: The initials are stuck in the top-left corner of the circle. Make the avatar a flex container. */
+    /* TODO 51: Center the initials from left to right... */
+    /* TODO 52: ...and from top to bottom. Perfect centering, no math! */
+    width: 3rem;
+    height: 3rem;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-weight: 700;
+    color: #1e1b3a;
+    background-color: #ffb347;
+    border-radius: 50%;
+}
+
+.review-quote {
+    /* TODO 53: The quote does not fill the space next to the avatar. Let it take ALL the remaining space. */
+}
+
+.review-text {
+    color: #e8e4ff;
+    margin-bottom: 0.75rem;
+}
+
+.review-author {
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    color: #ffb347;
+}
+
+.newsletter {
+    padding: 4.5rem 1.5rem;
+    background-color: #ffb347;
+}
+
+.newsletter .section-intro {
+    color: #3d3553;
+    margin-bottom: 2rem;
+}
+
+.newsletter-form {
+    /* TODO 54: We want control over how the label, input, and button line up. Make the form a flex container. */
+    /* TODO 55: Everything is squeezed into one line. Allow the form items to move to a new line. */
+    /* TODO 56: The label, input, and button are touching. Add 0.75rem of space between them. */
+    max-width: 32rem;
+    margin: 0 auto;
+}
+
+.form-label {
+    /* TODO 57: The label is squeezed next to the input. Make the label take a FULL row so it sits ABOVE the input and button. */
+    font-weight: 600;
+    color: #1e1b3a;
+}
+
+.form-input {
+    /* TODO 58: The input is small and leaves empty space in the row. Let the input take all the extra room. */
+    /* TODO 59: On tiny screens the input gets too narrow. Make it start at 220px before it takes the extra room. */
+    padding: 0.875rem 1.25rem;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 1rem;
+    border: 2px solid #1e1b3a;
+    border-radius: 2rem;
+}
+
+.form-button {
+    /* TODO 60: On narrow screens the button gets squeezed. Make sure the button NEVER gets squeezed (the input should give up space instead). */
+    padding: 0.875rem 1.75rem;
+    font-family: 'Poppins', Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: #1e1b3a;
+    border: none;
+    border-radius: 2rem;
+}
+
+.site-footer {
+    /* TODO 61: The footer columns are stacked on top of each other. Put them in a row. */
+    /* TODO 62: On small screens the columns get squeezed. Let them move to a new line. */
+    /* TODO 63: The columns are crowded on the left. Spread them across the whole footer. */
+    /* TODO 64: The columns are touching. Add 2.5rem of space between them. */
+    padding: 4rem 8% 2rem;
+    color: #cfcaf2;
+    background-color: #15132b;
+}
+
+.footer-col {
+    /* TODO 65: The columns are all different widths. Make them equal columns that start at 220px. */
+}
+
+.footer-heading {
+    font-size: 1.125rem;
+    color: #ffffff;
+    margin-bottom: 0.75rem;
+}
+
+.footer-address {
+    font-style: normal;
+}
+
+.footer-link {
+    color: #ffb347;
+}
+
+.hours-list {
+    /* TODO 66: We want control over the hours rows. Make the hours list a flex container (watch what happens!). */
+    /* TODO 67: Oops, the rows jumped side by side! Stack them back on top of each other. */
+    /* TODO 68: The rows are touching. Add 0.5rem of space between them. */
+}
+
+.hours-row {
+    /* TODO 69: Each row needs its own layout for the day and the time. Make each row a flex container. */
+    /* TODO 70: The day and the time are glued together on the left. Put the day on the LEFT and the time on the RIGHT. */
+    /* TODO 71: If the text gets long, the day and time can touch. Keep at least 1rem of space between them. */
+    padding-bottom: 0.5rem;
+    border-bottom: 1px dashed #3a3566;
+}
+
+.hours-day {
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    /* TODO 72: The copyright line is squeezed in next to the columns. Make it take a FULL row below the three columns. */
+    padding-top: 2rem;
+    font-size: 0.875rem;
+    text-align: center;
+    border-top: 1px solid #2e2a55;
+}

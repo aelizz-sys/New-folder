@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frame Club | Campus Photography Club</title>
+
+    <!-- STEP 1: Google Fonts (DM Serif Display for headings + DM Sans for body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+    <!-- STEP 2: Our stylesheet (AFTER the Google Fonts links) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== HEADER + NAVBAR: a Flexbox job (one row, one direction) ========== -->
+    <header class="site-header">
+        <nav class="navbar" aria-label="Main navigation">
+            <a href="#" class="logo">Frame<span class="logo-accent">Club</span></a>
+
+            <ul class="nav-links">
+                <li class="nav-item"><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="#contest" class="nav-link">Contest</a></li>
+                <li class="nav-item"><a href="#walks" class="nav-link">Photo Walks</a></li>
+                <li class="nav-item"><a href="#join" class="nav-link">Join</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== HERO: everything centered with Grid ========== -->
+        <section class="hero">
+            <p class="hero-kicker">Campus Photography Club &middot; Since 2018</p>
+            <h1 class="hero-title">See Campus Through a Different Lens</h1>
+            <p class="hero-text">Weekly photo walks, friendly feedback, and a monthly contest. Bring any camera, even the one in your pocket.</p>
+            <a href="#join" class="button">Join for Free</a>
+
+            <ul class="hero-stats">
+                <li class="stat"><strong class="stat-number">140</strong> <span class="stat-label">members</span></li>
+                <li class="stat"><strong class="stat-number">12</strong> <span class="stat-label">walks a term</span></li>
+                <li class="stat"><strong class="stat-number">3,200</strong> <span class="stat-label">photos shared</span></li>
+            </ul>
+        </section>
+
+        <!-- ========== GALLERY: Pinterest-style grid with wide and tall photos ========== -->
+        <section id="gallery" class="gallery-section">
+            <h2 class="section-title">Member Gallery</h2>
+            <p class="section-intro">Every photo here was taken on or near campus by a club member. Some are shot on big cameras, most are shot on phones.</p>
+
+            <ul class="filter-list">
+                <li><button type="button" class="filter filter-active">All</button></li>
+                <li><button type="button" class="filter">Nature</button></li>
+                <li><button type="button" class="filter">City</button></li>
+                <li><button type="button" class="filter">Night</button></li>
+                <li><button type="button" class="filter">Travel</button></li>
+            </ul>
+
+            <ul class="gallery">
+                <li class="gallery-item"><img src="images/lake-sunrise.svg" alt="Pink sunrise over mountains reflected in a still lake"></li>
+                <li class="gallery-item special-item-2"><img src="images/city-night.svg" alt="City buildings with lit windows under a crescent moon"></li>
+                <li class="gallery-item"><img src="images/forest-path.svg" alt="A dirt path curving through layers of green pine trees"></li>
+                <li class="gallery-item"><img src="images/desert-dunes.svg" alt="Orange sand dunes under a large pale sun"></li>
+                <li class="gallery-item"><img src="images/lighthouse.svg" alt="A red and white lighthouse on rocks beside the sea"></li>
+                <li class="gallery-item"><img src="images/ocean-waves.svg" alt="Rolling blue ocean waves under a light sky"></li>
+                <li class="gallery-item"><img src="images/snow-peaks.svg" alt="Snow-capped mountain peaks against a blue sky"></li>
+                <li class="gallery-item"><img src="images/aurora.svg" alt="Green northern lights over dark hills and a starry sky"></li>
+                <li class="gallery-item"><img src="images/tulip-field.svg" alt="Rows of red, yellow, and pink tulips stretching to the horizon"></li>
+                <li class="gallery-item"><img src="images/clock-tower.svg" alt="The campus clock tower at dusk with a purple sky"></li>
+                <li class="gallery-item"><img src="images/golden-field.svg" alt="A wheat field glowing gold as the sun sets behind a lone tree"></li>
+                <li class="gallery-item"><img src="images/sunset-pier.svg" alt="A wooden pier stretching into a calm sea at sunset"></li>
+                <li class="gallery-item"><img src="images/autumn-tree.svg" alt="A big orange tree in fall with leaves on the ground"></li>
+                <li class="gallery-item"><img src="images/harbor-boats.svg" alt="Two sailboats resting in a calm blue harbor"></li>
+            </ul>
+        </section>
+
+        <!-- ========== CONTEST: placing photos with grid line numbers ========== -->
+        <section id="contest" class="contest-section">
+            <h2 class="section-title">September Contest Winners</h2>
+            <p class="section-intro">This month's theme was <strong>Golden Hour</strong>: the soft, warm light just after sunrise and just before sunset.</p>
+
+            <div class="contest-grid">
+                <figure class="entry entry-winner">
+                    <img src="images/golden-field.svg" alt="A wheat field glowing gold as the sun sets behind a lone tree" class="entry-image">
+                    <figcaption class="entry-label entry-label-gold">1st Place: Maya Ortiz</figcaption>
+                </figure>
+                <figure class="entry">
+                    <img src="images/lake-sunrise.svg" alt="Pink sunrise over mountains reflected in a still lake" class="entry-image">
+                    <figcaption class="entry-label">2nd: Leo Chen</figcaption>
+                </figure>
+                <figure class="entry">
+                    <img src="images/city-night.svg" alt="City buildings with lit windows under a crescent moon" class="entry-image">
+                    <figcaption class="entry-label">3rd: Amara Okafor</figcaption>
+                </figure>
+                <p class="contest-note">Next theme: <strong>Reflections</strong>. Due Oct 31.</p>
+                <figure class="entry entry-honorable">
+                    <img src="images/sunset-pier.svg" alt="A wooden pier stretching into a calm sea at sunset" class="entry-image">
+                    <figcaption class="entry-label">Honorable Mention: Sofia Rossi</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ========== PHOTO WALKS: fixed + flexible columns in every row ========== -->
+        <section id="walks" class="walks-section">
+            <h2 class="section-title">Upcoming Photo Walks</h2>
+            <p class="section-intro">Free, about two hours long, and open to everyone. Just show up at the meeting spot.</p>
+
+            <ul class="walk-list">
+                <li class="walk">
+                    <p class="walk-date"><span class="walk-month">Oct</span> <span class="walk-day">12</span></p>
+                    <div class="walk-info">
+                        <h3 class="walk-title">Sunrise at the Boathouse</h3>
+                        <p class="walk-meta">6:30 a.m. &middot; Bring a tripod if you have one</p>
+                    </div>
+                    <p class="walk-spots">8 left</p>
+                </li>
+                <li class="walk">
+                    <p class="walk-date"><span class="walk-month">Oct</span> <span class="walk-day">19</span></p>
+                    <div class="walk-info">
+                        <h3 class="walk-title">Night Lights Downtown</h3>
+                        <p class="walk-meta">8:00 p.m. &middot; Meet at the bus stop on Main Street</p>
+                    </div>
+                    <p class="walk-spots">3 left</p>
+                </li>
+                <li class="walk">
+                    <p class="walk-date"><span class="walk-month">Oct</span> <span class="walk-day">26</span></p>
+                    <div class="walk-info">
+                        <h3 class="walk-title">Fall Colors in the Arboretum</h3>
+                        <p class="walk-meta">3:00 p.m. &middot; Meet at the north gate</p>
+                    </div>
+                    <p class="walk-spots walk-spots-full">Full</p>
+                </li>
+                <li class="walk">
+                    <p class="walk-date"><span class="walk-month">Nov</span> <span class="walk-day">2</span></p>
+                    <div class="walk-info">
+                        <h3 class="walk-title">Portraits on the Quad</h3>
+                        <p class="walk-meta">1:00 p.m. &middot; Bring a friend to photograph</p>
+                    </div>
+                    <p class="walk-spots">12 left</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ========== CLUB HUB: grid-template-areas for structure, Flexbox inside ========== -->
+        <section class="hub-section">
+            <h2 class="section-title">Your Club Hub</h2>
+            <p class="section-intro">A preview of the members' dashboard. Grid draws the big boxes, Flexbox arranges what is inside them.</p>
+
+            <div class="hub">
+                <header class="hub-header">
+                    <p class="hub-greeting">Welcome back, <strong>Sam</strong></p>
+                    <a href="#" class="hub-upload">+ Upload Photo</a>
+                </header>
+
+                <nav class="hub-sidebar" aria-label="Club hub menu">
+                    <ul class="hub-menu">
+                        <li><a href="#" class="hub-link hub-link-active">Dashboard</a></li>
+                        <li><a href="#" class="hub-link">My Photos</a></li>
+                        <li><a href="#" class="hub-link">Assignments</a></li>
+                        <li><a href="#" class="hub-link">Feedback</a></li>
+                        <li><a href="#" class="hub-link">Settings</a></li>
+                    </ul>
+                </nav>
+
+                <section class="hub-content">
+                    <h3 class="hub-title">This Week: Leading Lines</h3>
+                    <p class="hub-text">Find roads, fences, stairs, or shadows that pull the viewer's eye into the photo. Upload three photos by Sunday night.</p>
+
+                    <ul class="hub-stats">
+                        <li class="hub-stat">
+                            <strong class="hub-stat-number">2 of 3</strong>
+                            <span class="hub-stat-label">photos uploaded</span>
+                            <span class="progress"><span class="progress-bar"></span></span>
+                        </li>
+                        <li class="hub-stat">
+                            <strong class="hub-stat-number">14</strong>
+                            <span class="hub-stat-label">likes</span>
+                        </li>
+                        <li class="hub-stat">
+                            <strong class="hub-stat-number">5</strong>
+                            <span class="hub-stat-label">comments</span>
+                        </li>
+                    </ul>
+
+                    <p class="button-group">
+                        <a href="#" class="button">Upload Photo 3</a>
+                        <a href="#" class="button button-outline">See Examples</a>
+                    </p>
+                </section>
+
+                <footer class="hub-footer">
+                    <p class="hub-footer-text">Next meetup: Thursday, 7 p.m., Art Building Room 204</p>
+                    <a href="#walks" class="hub-footer-link">All events</a>
+                </footer>
+            </div>
+        </section>
+
+        <!-- ========== CLUB WALL: polaroids aligned inside their grid cells ========== -->
+        <section class="wall-section">
+            <h2 class="section-title">Pinned on the Club Wall</h2>
+            <p class="section-intro">Our favorite prints from last semester's show, pinned up in the club room.</p>
+
+            <ul class="wall">
+                <li class="polaroid">
+                    <img src="images/snow-peaks.svg" alt="Snow-capped mountain peaks against a blue sky" class="polaroid-image">
+                    <p class="polaroid-caption">Spring break trip</p>
+                </li>
+                <li class="polaroid polaroid-top polaroid-left">
+                    <img src="images/tulip-field.svg" alt="Rows of colorful tulips" class="polaroid-image">
+                    <p class="polaroid-caption">Garden open day</p>
+                </li>
+                <li class="polaroid polaroid-bottom">
+                    <img src="images/aurora.svg" alt="Green northern lights over dark hills" class="polaroid-image">
+                    <p class="polaroid-caption">Up all night for this</p>
+                </li>
+                <li class="polaroid polaroid-top polaroid-right">
+                    <img src="images/lighthouse.svg" alt="A red and white lighthouse beside the sea" class="polaroid-image">
+                    <p class="polaroid-caption">Coast weekend</p>
+                </li>
+                <li class="polaroid polaroid-bottom polaroid-left">
+                    <img src="images/forest-path.svg" alt="A path through green pine trees" class="polaroid-image">
+                    <p class="polaroid-caption">First film roll</p>
+                </li>
+                <li class="polaroid">
+                    <img src="images/clock-tower.svg" alt="The campus clock tower at dusk" class="polaroid-image">
+                    <p class="polaroid-caption">Our home base</p>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ========== JOIN: a centered column + a form grid ========== -->
+        <section id="join" class="join-section">
+            <div class="join-card">
+                <h2 class="section-title">Join Frame Club</h2>
+                <p class="section-intro">Membership is free for all students. Fill this out and we will send you the meetup details.</p>
+
+                <form class="join-form" action="#">
+                    <p class="form-field">
+                        <label for="name" class="form-label">Full name</label>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="Sam Rivera">
+                    </p>
+                    <p class="form-field">
+                        <label for="email" class="form-label">School email</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="you@school.edu">
+                    </p>
+                    <p class="form-field">
+                        <label for="year" class="form-label">Year</label>
+                        <select id="year" name="year" class="form-input">
+                            <option>First year</option>
+                            <option>Second year</option>
+                            <option>Third year</option>
+                            <option>Fourth year</option>
+                            <option>Graduate student</option>
+                        </select>
+                    </p>
+                    <p class="form-field">
+                        <label for="camera" class="form-label">What do you shoot with?</label>
+                        <select id="camera" name="camera" class="form-input">
+                            <option>My phone</option>
+                            <option>A digital camera</option>
+                            <option>A film camera</option>
+                            <option>I don't have a camera yet</option>
+                        </select>
+                    </p>
+                    <p class="form-field form-field-full">
+                        <label for="message" class="form-label">What do you love to photograph?</label>
+                        <textarea id="message" name="message" class="form-input" rows="4" placeholder="Sunsets, my dog, old buildings..."></textarea>
+                    </p>
+                    <button type="submit" class="form-button">Send My Application</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========== FOOTER: columns that wrap + a full-width bottom line ========== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <section class="footer-col">
+                <h2 class="footer-heading">Frame Club</h2>
+                <p class="footer-text">A friendly campus club for anyone who likes taking pictures. No experience needed.</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Meetings</h2>
+                <p class="footer-text">Thursdays, 7 p.m.<br>Art Building, Room 204</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Follow Us</h2>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Flickr</a></li>
+                    <li><a href="#" class="footer-link">Club Newsletter</a></li>
+                </ul>
+            </section>
+
+            <p class="footer-bottom">&copy; 2026 Frame Club. A practice page for Introduction to Web Design: CSS Grid.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

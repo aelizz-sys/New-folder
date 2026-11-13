@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 40" width="200" height="40">
+  <rect x="2" y="16" width="30" height="21" rx="3" fill="#16171b"/>
+  <path d="M3 13 L30 5 L32 11 L5 19 Z" fill="#ffffff" stroke="#16171b" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M10 9.5 L14 16.5 M17 7.5 L21 14.5 M24 5.5 L28 12.5" stroke="#16171b" stroke-width="3"/>
+  <circle cx="26" cy="22" r="2.5" fill="#d93a2b"/>
+  <text x="42" y="33" font-family="Impact, 'Arial Narrow Bold', 'Helvetica Neue', sans-serif" font-size="30" letter-spacing="1" fill="#16171b">FIRST CUT</text>
+</svg>

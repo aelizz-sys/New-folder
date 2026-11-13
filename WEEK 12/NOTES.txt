@@ -1,0 +1,18 @@
+git init
+    ADD THE README.md
+    ADD THE .gitignore
+
+
+git pull
+
+...edit something inside project
+git add .
+git comit -m "message" (do so after changes)
+git push
+
+git status
+
+1- Make public
+2- Settings -> Go to pages -> Branch name -> Root -> Submit
+
+

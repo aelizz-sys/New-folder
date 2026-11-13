@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked | Literary News</title>
+    <meta name="description" content="This is Booked, your go-to source for the latest literary news, book reviews, and recommendations. Join our community of book lovers and stay updated on the world of literature.">
+    <meta name="author" content="Abygail Elizondo">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Booked | Literary News">
+    <meta property="og:description" content="This is Booked, your go-to source for the latest literary news, book reviews, and recommendations. Join our community of book lovers and stay updated on the world of literature.">
+    <meta property="og:image" content="https://www.booked.com/images/og-image.jpg">
+    <meta property="og:url" content="https://www.booked.com/home.html">
+    <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="images/featured.webp" as="image">
+</head>
+<body>
+
+    <!-- ========== HEADER: sticky + hamburger menu ========== -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#top" class="logo">BOOKED</a>
+
+            <!-- The hidden checkbox -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+
+            <!-- The hamburger icon -->
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </label>
+
+            <!-- The menu -->
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="article.html" class="nav-link">Articles</a></li>
+                <li><a href="booked-tbr.html" class="nav-link">Booked' TBR</a></li>
+                <li><a href="join.html" class="nav-link">Join</a></li>
+                <li><a href="home.html" class="nav-link nav-link-cta">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- ========== ARTICLE HOME PAGE ========== -->
+        <section class="home-section">
+            <div class="home">
+                <header class="home-header">
+                    <h1 class="home-greeting"> Welcome to <span class="home-highlight">Booked!</span> </h1>
+                    <a href="join.html" class="button">Join the Newsletter</a>
+                </header>
+
+                <nav class="home-sidebar" aria-label="Club home menu">
+                    <ul class="home-menu">
+                        <li><a href="article.html" class="home-button home-button-active">Featured Story:</a></li>
+                    </ul>
+                <picture>
+                    <figure class="story story-featured">
+                        <source srcset="images/featured.webp" type="image/webp">
+                        <img src="images/featured.webp" alt="Logo image with green leaves and pink flowers for Rot & Read Book Club" class="story-image"
+                        height="200" width="200" loading="eager">
+                    </figure>
+                </picture>
+                </nav>
+
+        <section class="home-content">
+                    <h2 class="home-title">Flip the page on the latest literary news!</h2>
+                    <p class="home-text">From book clubs and reading with friends to anticipated books and seasonal recommendations.</p>
+
+                    <div class="article-grid">
+                <picture>
+                    <figure class="story-buddy">
+                        <source srcset="images/buddy.webp" type="image/webp">
+                        <img src="images/buddy.webp" loading="eager" height="200" width="200" alt="Book cover of a woman in dark lighting and leaning against a wall" class="entry-image">
+                        <figcaption class="story-label"> <strong> Booked With Friends: Buddy Read Spotlight!</strong>
+                        <!-- Credit: Image from Librofm -->
+                        <p class="buddy-text">Join Abygail Elizondo as she discusses the joy of reading with friends!
+                        With her fellow literary lover, Mads, they sat down with Booked to let us in on when their journey began and a few books they've enjoyed along the way. </p> 
+                        </figcaption>
+                    </figure>
+                </picture>
+
+                <picture>
+                    <figure class="story-seasonal">
+                        <source srcset="images/seasonal.webp" type="image/webp">
+                        <img src="images/seasonal.webp" loading="eager" height="200" width="200" alt="An open book and cup of coffee with a blanket and small pumpkin" class="entry-image">
+                        <figcaption class="story-label"> <strong>Reccomendations for Spooky Season!</strong>
+                        <!-- Credit: Image from Pixabay -->
+                        <p class="seasonal-text">Booked is bringing you our most reccommended books to make your October spooky and cozy. 
+                        From beloved classics from authors like Shirley Jackson, to modern hits from Isabela Canas, we have got you covered!</p> 
+                        </figcaption>
+                    </figure>
+                </picture>
+
+                <picture>
+                    <figure class="story-monthly">
+                        <source srcset="images/monthly.webp" type="image/webp">
+                        <img src="images/monthly.webp" loading="lazy" height="200" width="200" alt="Rustic bookshelf with books, floral decor, and a coffee mug" class="entry-image">
+                        <figcaption class="story-label"><strong>Anticipated Releases of the Month!</strong>
+                        <!-- Credit: Image from artofit.org -->
+                        <p class="monthly-text">Read about our most anticipated books of the month and ones you won't want to miss out on!
+                            If you are looking for a read that redefines your favorite genres or want a book to accompany you out in the world, check out our list. </p> 
+                        </figcaption>
+                    </figure>
+                </picture>
+                    </div>
+        </section>
+
+                <footer class="home-footer">
+                    <p class="home-footer-text">Stay tuned for weekly stories and literary updates! </p>
+                </footer>
+            </div>
+        </section>
+    <main>
+            <!-- ========== FEATURED ARTICLE ========== -->
+            <article id="featured-article" class="article">
+
+            <!-- Article header: category, headline, subtitle, meta info -->
+            <header class="article-header">
+                <p class="article-category">Featured Stories</p>
+                <h1 class="article-title">The Rot & Read book club is booked for October!</h1>
+                <p class="article-subtitle">Turn the page with Rot & Read and delve into their monthly read and its book-loving community.</p>
+                <p class="article-meta">
+                    <span class="author-name"> By <strong>abygail elizondo</strong></span>
+                    | <time class="article-date" datetime="2026-09-25">October 19, 2026</time>
+                    | <span class="read-time">3 min read</span>
+                </p>
+                <section> 
+                    <article class="featured-block">
+                    <figure class="featured-figure">
+                        <img src="images/featured.webp" alt="Logo image with green leaves and pink flowers for Rot & Read Book Club" class="featured-image">
+                        <figcaption class="featured-caption">The Rot & Read book club official logo, designed by Mellovesreading.</figcaption>
+                    </figure>
+                    </article>
+                </section>
+            </header>
+
+        <!-- Article body: the main story -->
+        <main> 
+        <section class="article-body">
+                <p class="lead-paragraph"> The Rot & Read book club was founded by social media influencer and book lover, <strong>Mellovesreading.</strong> 
+                    Through platforms like TikTok and YouTube, she shares her love of reading with literary and lifestyle focused content.</p>
+                <p> As a university student and full-time content creator, she prioritizes productiity while maintaing a slow lifestyle 
+                    to creae space for the little things they enjoy. </p>
+
+                <p>One of those hobbies is, of course, reading, which she dedicates her platforms to. 
+                    When she's not sharing her trips to the library or her latest annotation guides for her current reads, Mel also hosts a book club on Fable.</p>
+
+                <h2 class="section-heading">Rot & Read book club on Fable!</h2>
+
+                <p>If you have not heard of Fable, it is an app where users can log books and socialize with others about them through reviews or posts.
+                    While Mel logs books she reads on her own time, she also has a club with her followers where they choose a book to read each month. 
+                    The past three months have included books like: 
+                </p>
+
+                <ul class="article-list">
+                    <li><strong>October:</strong> The Poisoner by I.V. Ophelia</li>
+                    <li><strong>September:</strong> The Knave and the Moon by Rachel Gillig</li>
+                    <li><strong>August:</strong> The Knight and the Moth by Rachel Gillig</li>
+                </ul>
+
+                <h3 class="subsection-heading">The Rot & Read book club brings people together!</h3>
+
+                <p>One of the most notable aspects about the Rot & Read book club is how people share their interest in reading. 
+                    Whether the book of the month is completely new to a user or has been sitting on the "To be read" list, 
+                    it is a safe space to exchange fun, like-minded dialouge.
+                </p>
+                <!-- Pull quote: a highlighted quote from the story -->
+                <blockquote class="pull-quote">
+                    <p class="quote-text">"I found this club through Mel's YouTube channel and decided to step out of my comfort zone 
+                        and finally try out a book club!"</p>
+                    <cite class="quote-author"><strong>Betzaida</strong>, comment from Rot & Read book club on Fable</cite>
+                </blockquote>
+        </section>
+        <!-- ========== GALLERY ========== -->
+        <section class="hero">
+            <p class="hero-kicker">Booked' TBR &middot; Updated monthly!</p>
+            <h1 class="hero-title">Check out what <span>Booked</span> is reading during October!</h1>
+            <p class="hero-text">modified by Abygail Elizondo.</p>
+
+            <ul class="filter-list">
+                <li><button type="button" class="filter filter-active">All</button></li>
+                <li><button type="button" class="filter">Genre</button></li>
+                <li><button type="button" class="filter">Author</button></li>
+                <li><button type="button" class="filter">Reviews</button></li>
+            </ul>
+
+            <ul class="gallery">
+                <li class="gallery-item"><img src="images/when the night comes knocking.webp" alt="Cover of When the Night Comes Knocking by Katherine Daniel"></li>
+                <!-- Credit: Image extracted from Target.com -->
+                <li class="gallery-item"><img src="images/us against you.webp" alt="Cover of Us Against You by Fredrick Backman"></li>
+                <!-- Credit: Image extracted from goodreads.com -->
+                <li class="gallery-item"><img src="images/shark heart.webp" alt="Cover of Shark Heart by Emily Habeck"></li>
+                <!-- Credit: Image extracted from aubreedeimler.com -->
+                <li class="gallery-item"><img src="images/atmosphere.webp" alt="Cover of Atmoshphere by Taylor Jenkins Reid"></li>
+                <!-- Credit: Image extracted from Amazon.com -->
+                <li class="gallery-item"><img src="images/shirley jackson.webp" alt="Cover of We Have Always Lived in a Castle by Shirley Jackson"></li>
+                <!-- Credit: Image extracted from Kobo.com -->
+                <li class="gallery-item"><img src="images/slewfoot.webp" alt="Cover of Slewfoot by Brom"></li>
+                <!-- Credit: Image extracted from goodreads.com  -->
+                <li class="gallery-item"><img src="images/hacienda-scaled.webp" alt="Cover of The Hacienda by Isabela Canas"></li>
+                <!-- Credit: Image extracted from CemetaryDance.com  -->
+                <li class="gallery-item"><img src="images/fruit-fly.webp" alt="Cover of Fruit Fly by Josh Silver"></li>
+                <!-- Credit: Image extracted from simonandschuster.co.uk  -->
+            </ul>
+        </section>
+
+        <section id="about" class="about">
+            <article class="about-block">
+                <figure class="about-figure">
+                    <img src="images/about.webp" alt="Open book with a red leaf on the page" class="about-image">
+                </figure>
+                <div class="about-text">
+                    <h2 class="section-title section-title-left">Started by Abygail Elizondo to share literary culture with others.</h2>
+                    <p>Booked began in 2026 for individuals who want a reliable place to get literary news and share their interest of books.</p>
+                    <p>We hope to grow our newsletter and introduce people to books from all over the world, bridging culture and literature.</p>
+                </div>
+            </article>
+
+        <!-- ========== JOIN: form pseudo-classes ========== -->
+        <section id="join" class="section">
+            <div class="container">
+                <h2 class="section-title">Join the Booked Newsletter!</h2>
+                <p class="section-intro">Stay up to date on the latest literary news.</p>
+
+                <form class="join-form" action="#">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="What should we call you?" required>
+
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="yourchoice@gmail.com" required>
+
+                    <button type="submit" class="button">Be apart of the club!<span class="arrow" aria-hidden="true">&rarr;</span></button>
+                </form>
+            </div>
+        </section>
+
+    <!-- ========== FOOTER: columns that wrap + a full-width bottom line ========== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <section class="footer-col">
+                <h2 class="footer-heading">Booked!</h2>
+                <p class="footer-text">Giving you the latest literary news on books.</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Contact</h2>
+                <p class="footer-text">BookedLit@gmail.com.</p>
+                <p class="footer-text">806-400-2000.</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Follow Us</h2>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Fable</a></li>
+                    <li><a href="#" class="footer-link">Club Newsletter</a></li>
+                </ul>
+            </section>
+
+            <p class="footer-bottom">&copy; 2026 Booked!</p>
+        </div>
+    </footer>
+    </main>
+
+</body>
+</html>
+
+
+
+
+
+

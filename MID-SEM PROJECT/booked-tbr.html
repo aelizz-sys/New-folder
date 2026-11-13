@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booked | Literary News</title>
+    <meta name="description"
+        content="This is Booked, your go-to source for the latest literary news, book reviews, and recommendations. Join our community of book lovers and stay updated on the world of literature.">
+    <meta name="author" content="Booked">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Booked | Literary News">
+    <meta property="og:description" content="This is Booked, your go-to source for the latest literary news, book reviews, and recommendations. Join our community of book lovers and stay updated on the world of literature.">
+    <meta property="og:image" content="https://www.booked.com/images/og-image.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cutive+Mono&family=Special+Elite&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="images/featured.webp" as="image">
+</head>
+<body>
+
+    <!-- ========== HEADER: sticky + hamburger menu (checkbox) ========== -->
+    <header class="site-header">
+        <nav class="navbar container" aria-label="Main navigation">
+            <a href="#top" class="logo">BOOKED</a>
+
+            <!-- The hidden checkbox (THE KEY!): checked = menu open -->
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">
+
+            <!-- The hamburger icon is a LABEL: clicking it ticks the checkbox -->
+            <label for="menu-toggle" class="hamburger" aria-label="Menu">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </label>
+
+            <!-- The menu comes AFTER the checkbox, so CSS can use: .menu-toggle:checked ~ .nav-menu -->
+            <ul class="nav-menu">
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="article.html" class="nav-link">Articles</a></li>
+                <li><a href="booked-tbr.html" class="nav-link">Booked' TBR</a></li>
+                <li><a href="join.html" class="nav-link">Join</a></li>
+                <li><a href="home.html" class="nav-link nav-link-cta">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ========== GALLERY ========== -->
+        <section class="hero">
+            <p class="hero-kicker">Booked' TBR &middot; Updated monthly!</p>
+            <h1 class="hero-title">Check out what <span>Booked</span> is reading during October!</h1>
+            <p class="hero-text">modified by Abygail Elizondo.</p>
+
+            <ul class="filter-list">
+                <li><button type="button" class="filter filter-active">All</button></li>
+                <li><button type="button" class="filter">Genre</button></li>
+                <li><button type="button" class="filter">Author</button></li>
+                <li><button type="button" class="filter">Reviews</button></li>
+            </ul>
+
+            <ul class="gallery">
+                <li class="gallery-item"><img src="images/when the night comes knocking.webp" alt="Cover of When the Night Comes Knocking by Katherine Daniel"></li>
+                <!-- Credit: Image extracted from Target.com -->
+                <li class="gallery-item"><img src="images/us against you.webp" alt="Cover of Us Against You by Fredrick Backman"></li>
+                <!-- Credit: Image extracted from goodreads.com -->
+                <li class="gallery-item"><img src="images/shark heart.webp" alt="Cover of Shark Heart by Emily Habeck"></li>
+                <!-- Credit: Image extracted from aubreedeimler.com -->
+                <li class="gallery-item"><img src="images/atmosphere.webp" alt="Cover of Atmoshphere by Taylor Jenkins Reid"></li>
+                <!-- Credit: Image extracted from Amazon.com -->
+                <li class="gallery-item"><img src="images/shirley jackson.webp" alt="Cover of We Have Always Lived in a Castle by Shirley Jackson"></li>
+                <!-- Credit: Image extracted from Kobo.com -->
+                <li class="gallery-item"><img src="images/slewfoot.webp" alt="Cover of Slewfoot by Brom"></li>
+                <!-- Credit: Image extracted from goodreads.com  -->
+                <li class="gallery-item"><img src="images/hacienda-scaled.webp" alt="Cover of The Hacienda by Isabela Canas"></li>
+                <!-- Credit: Image extracted from CemetaryDance.com  -->
+                <li class="gallery-item"><img src="images/fruit-fly.webp" alt="Cover of Fruit Fly by Josh Silver"></li>
+                <!-- Credit: Image extracted from simonandschuster.co.uk  -->
+            </ul>
+        </section>
+
+    <!-- ========== FOOTER: columns that wrap + a full-width bottom line ========== -->
+    <footer class="site-footer">
+        <div class="footer-grid">
+            <section class="footer-col">
+                <h2 class="footer-heading">Booked!</h2>
+                <p class="footer-text">Giving you the latest literary news on books.</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Contact</h2>
+                <p class="footer-text">BookedLit@gmail.com.</p>
+                <p class="footer-text">806-400-2000.</p>
+            </section>
+
+            <section class="footer-col">
+                <h2 class="footer-heading">Follow Us</h2>
+                <ul class="footer-links">
+                    <li><a href="#" class="footer-link">Instagram</a></li>
+                    <li><a href="#" class="footer-link">Fable</a></li>
+                    <li><a href="#" class="footer-link">Club Newsletter</a></li>
+                </ul>
+            </section>
+
+            <p class="footer-bottom">&copy; 2026 Booked!</p>
+        </div>
+    </footer>
+    </main>
+
+</body>
+</html>

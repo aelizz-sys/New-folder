@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="s" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fd0e0"/><stop offset="1" stop-color="#f8dcb4"/>
+    </linearGradient>
+    <linearGradient id="w" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6fa8b8"/><stop offset="1" stop-color="#2f5d73"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#s)"/>
+  <path fill="#7f9a8a" d="M0 330 L140 190 L260 290 L400 150 L540 280 L660 200 L800 310 V380 H0 Z"/>
+  <path fill="#4f6f5e" d="M0 380 L120 300 L250 360 L390 280 L520 350 L680 290 L800 350 V390 H0 Z"/>
+  <rect y="380" width="800" height="220" fill="url(#w)"/>
+  <g stroke="#ffffff" stroke-opacity="0.45" stroke-width="4" stroke-linecap="round">
+    <line x1="120" y1="440" x2="220" y2="440"/><line x1="420" y1="470" x2="560" y2="470"/>
+    <line x1="260" y1="520" x2="360" y2="520"/><line x1="600" y1="540" x2="700" y2="540"/>
+  </g>
+  <path fill="#d9c7a3" d="M0 380 C150 400 250 395 330 380 L330 400 L0 420 Z"/>
+  <polygon points="170,392 215,330 260,392" fill="#f6b73c"/>
+  <polygon points="215,330 230,392 200,392" fill="#d9941f"/>
+  <g fill="#1d3b2f">
+    <polygon points="20,395 45,300 70,395"/><polygon points="60,400 90,280 120,400"/>
+    <polygon points="700,390 730,290 760,390"/><polygon points="740,395 770,310 800,395"/>
+  </g>
+</svg>

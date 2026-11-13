@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sunset" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff8a5b"/><stop offset="1" stop-color="#ffd27a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="320" fill="url(#sunset)"/>
+  <circle cx="400" cy="320" r="70" fill="#fff0c4"/>
+  <rect y="320" width="800" height="280" fill="#c9605a"/>
+  <polygon points="360,600 390,330 410,330 440,600" fill="#5a3324"/>
+  <g stroke="#5a3324" stroke-width="6"><path d="M376 460 V520"/><path d="M424 460 V520"/><path d="M384 400 V440"/><path d="M416 400 V440"/></g>
+  <g stroke="#ffe3a8" stroke-width="6" stroke-linecap="round" opacity="0.7"><path d="M200 380 H300"/><path d="M500 410 H620"/><path d="M120 460 H220"/></g>
+</svg>

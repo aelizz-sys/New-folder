@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Days on the Ridge Trail | Wander Weekly</title>
+    <!-- STEP 1: Google Fonts (Merriweather for headings + Open Sans for body text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- STEP 2: Our stylesheet (AFTER the Google Fonts links) -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="top">
+
+    <!-- ========== SITE HEADER: will be FIXED to the top ========== -->
+    <header id="site-header" class="site-header">
+        <a href="#top" class="logo">Wander<span class="logo-accent">Weekly</span></a>
+
+        <nav id="main-nav" class="main-nav" aria-label="Main navigation">
+            <ul class="nav-list">
+                <li class="nav-item"><a href="#itinerary" class="nav-link">Plan</a></li>
+                <li class="nav-item"><a href="#gear" class="nav-link">Gear</a></li>
+                <li class="nav-item"><a href="#gear" class="nav-link nav-link-saved">Saved <span class="nav-count">3</span></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ========== MAIN CONTENT ========== -->
+    <main id="main-content" class="main-content">
+        <article class="feature">
+
+            <!-- ========== HERO: image + badge + title box ========== -->
+            <header class="hero">
+                <img src="images/hero-mountains.svg" alt="Sunset over layered green mountains and pine trees" class="hero-image">
+                <p class="hero-badge">Issue 24: Fall Trails</p>
+                <hgroup class="hero-text">
+                    <h1 class="hero-title">Three Days on the Ridge Trail</h1>
+                    <p class="hero-subtitle">A beginner-friendly backpacking trip with pine forests, alpine lakes, and the best sunsets in the state.</p>
+                </hgroup>
+            </header>
+
+            <!-- ========== STORY: text wraps around a photo and a quote ========== -->
+            <section id="story" class="story">
+                <p class="story-meta">By <strong>Priya Shah</strong> | <time datetime="2026-10-02">October 2, 2026</time> | 6 min read</p>
+
+                <figure class="story-figure">
+                    <img src="images/lake.svg" alt="Calm mountain lake with a small orange tent on the shore" class="story-image">
+                    <figcaption class="story-caption">Camp on the shore of Mirror Lake, Day 2.</figcaption>
+                </figure>
+
+                <h2 class="section-title">Why This Trail?</h2>
+
+                <p>The Ridge Trail is a 22-mile loop that climbs through pine forest, crosses two open ridgelines, and ends beside a string of quiet alpine lakes. It is long enough to feel like a real adventure, but gentle enough for first-time backpackers.</p>
+
+                <p>Most hikers finish the loop in three days. Campsites are spaced about seven miles apart, water is easy to find, and the trail is marked with bright orange blazes, so <mark class="highlight">getting lost is almost impossible</mark>.</p>
+
+                <blockquote class="story-quote">
+                    <p class="quote-text">"By the second night, I stopped checking my phone. I just watched the sky."</p>
+                </blockquote>
+
+                <p>The real reward is the light. Around 7 p.m. the sun drops behind the western peaks and the whole valley turns gold, then pink, then deep blue. Pack a warm layer and plan to sit still for a while.</p>
+
+                <p>Permits are free but required. Pick one up at the ranger station on the morning you start.</p>
+            </section>
+
+            <!-- ========== ITINERARY: each day title will STICK while you scroll ========== -->
+            <section id="itinerary" class="itinerary">
+                <h2 class="section-title">The 3-Day Plan</h2>
+                <p class="section-intro">Each day covers 7 to 8 miles, with plenty of time for breaks, snacks, and photos.</p>
+
+                <section class="day">
+                    <h3 class="day-title">Day 1: Trailhead to Pine Camp</h3>
+                    <ul class="day-stats">
+                        <li class="stat">7 miles</li>
+                        <li class="stat">1,400 ft climb</li>
+                        <li class="stat">About 4 hours</li>
+                    </ul>
+                    <p>Start early to beat the afternoon heat. The first two miles follow a creek through tall pines, with a few wooden bridges and plenty of shade.</p>
+                    <p>After the creek, the trail switchbacks up to Pine Camp, a flat clearing with space for about ten tents. Set up camp, filter water from the spring, and rest your legs.</p>
+                    <p>If you still have energy, take the short side path to Lookout Rock. It adds half a mile and gives you your first view of the ridge you will cross tomorrow.</p>
+                </section>
+
+                <section class="day">
+                    <h3 class="day-title">Day 2: Pine Camp to Mirror Lake</h3>
+                    <ul class="day-stats">
+                        <li class="stat">8 miles</li>
+                        <li class="stat">900 ft climb</li>
+                        <li class="stat">About 5 hours</li>
+                    </ul>
+                    <p>Today is the highlight. You leave the forest behind and walk the open ridgeline for almost three miles, with views in every direction.</p>
+                    <p>Wind can be strong up here, so keep your jacket handy and your hat clipped on. The trail drops gently to Mirror Lake by mid-afternoon.</p>
+                    <p>Mirror Lake is perfectly still most evenings. Grab a campsite on the north shore for the best sunset reflections.</p>
+                </section>
+
+                <section class="day">
+                    <h3 class="day-title">Day 3: Mirror Lake to Trailhead</h3>
+                    <ul class="day-stats">
+                        <li class="stat">7 miles</li>
+                        <li class="stat">1,300 ft descent</li>
+                        <li class="stat">About 3.5 hours</li>
+                    </ul>
+                    <p>The last day is mostly downhill through aspen groves. Take it slow on the steeper sections, because tired legs make small mistakes.</p>
+                    <p>About a mile from the end, the trail rejoins the creek from Day 1, so the loop closes right where it began.</p>
+                    <p>Back at the trailhead, the general store sells cold drinks and the best cinnamon rolls you will ever eat after three days of trail food.</p>
+                </section>
+            </section>
+
+            <!-- ========== GEAR: cards in a row with corner badges ========== -->
+            <section id="gear" class="gear">
+                <h2 class="section-title">Pack Smart: Our Gear Picks</h2>
+                <p class="section-intro">Three items our editors carried on every mile of this trip.</p>
+
+                <ul class="gear-list">
+                    <li class="gear-card">
+                        <span class="card-badge">New</span>
+                        <h3 class="card-title">Ridgeline 28L Daypack</h3>
+                        <p class="card-text">Light, padded, and big enough for a jacket, snacks, and two liters of water.</p>
+                        <p class="card-price">$89</p>
+                        <a href="#" class="card-link">View Details</a>
+                    </li>
+                    <li class="gear-card gear-card-featured">
+                        <span class="card-badge card-badge-pick">Staff Pick</span>
+                        <h3 class="card-title">Summit Grip Trail Shoes</h3>
+                        <p class="card-text">Sticky rubber soles and a wide toe box. Comfortable from the very first mile.</p>
+                        <p class="card-price">$120</p>
+                        <a href="#" class="card-link">View Details</a>
+                    </li>
+                    <li class="gear-card">
+                        <span class="card-badge card-badge-sale">Sale</span>
+                        <h3 class="card-title">PureFlow Water Filter</h3>
+                        <p class="card-text">Screws onto any bottle and filters a full liter in about one minute.</p>
+                        <p class="card-price">$29 <del class="card-price-old">$39</del></p>
+                        <a href="#" class="card-link">View Details</a>
+                    </li>
+                </ul>
+            </section>
+
+        </article>
+    </main>
+
+    <!-- ========== COOKIE NOTICE: will be HIDDEN with display: none ========== -->
+    <aside class="cookie-notice" aria-label="Cookie notice">
+        <p class="cookie-text">We use cookies to remember your saved trails.</p>
+        <button type="button" class="cookie-button">Got it</button>
+    </aside>
+
+    <!-- ========== BACK TO TOP: will be FIXED to the bottom-right corner ========== -->
+    <a href="#top" class="back-to-top">Back to top</a>
+
+    <!-- ========== SITE FOOTER ========== -->
+    <footer id="site-footer" class="site-footer">
+        <p class="footer-text">&copy; 2026 Wander Weekly. Trail details are for practice only.</p>
+        <p class="footer-note"><small>A practice page for Introduction to Web Design: CSS Layout Basics.</small></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="900" viewBox="0 0 600 900">
+  <rect width="600" height="900" fill="#efffd0"/>
+  <path d="M170 260 Q 300 70 430 260 Z" fill="#8a5cf6" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+  <path d="M90 270 Q 300 220 510 270 Q 520 330 300 320 Q 80 330 90 270 Z" fill="#7c4dea" stroke="#111" stroke-width="10" stroke-linejoin="round"/>
+  <circle cx="300" cy="185" r="38" fill="#ffe14d" stroke="#111" stroke-width="6"/>
+  <circle cx="287" cy="177" r="5" fill="#111"/><circle cx="313" cy="177" r="5" fill="#111"/>
+  <path d="M282 196 Q 300 212 318 196" fill="none" stroke="#111" stroke-width="5" stroke-linecap="round"/>
+  <text x="300" y="760" font-family="Arial, sans-serif" font-size="34" text-anchor="middle" fill="#9fbf62">(the hat is at the TOP of this tall image)</text>
+</svg>

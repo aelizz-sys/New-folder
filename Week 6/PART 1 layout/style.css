@@ -1,0 +1,120 @@
+/* ==========================================================
+   1. RESET & BASE
+   ========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #2b2b2b;
+    background-color: #ffffff;
+    padding-top: 64px;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+h1, h2, h3 {
+    font-family: 'Merriweather', Georgia, serif;
+    line-height: 1.25;
+    color: #1d3b2f;
+}
+
+.section-title {
+    font-size: 1.875rem;
+    margin-bottom: 1rem;
+}
+
+/* HEADER */
+.site-header {
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 64px;
+    padding: 0 1.5rem;
+    background-color: #1d3b2f;
+    z-index: 1000;
+}
+
+.logo {
+    line-height: 64px;
+    font-family:'Merriweather', Georgia, serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #fff;
+    text-decoration: none;
+}
+
+.logo-accent {
+    color: #f6b73c;
+}
+
+.main-nav {
+    float: right;
+
+}
+
+.nav-item {
+    display: inline-block;
+    margin-left: 1.5rem;
+}
+
+.nav-link {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    line-height: 64px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-link-saved {
+    position: relative;
+}
+
+.nav-count {
+    position: absolute;
+    right: -18px;
+    top: 12px;
+    line-height: 18px;
+    font-size: 0.6rem;
+    text-align: center;
+    background-color: red;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    color: white;
+}
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    display: block;
+    width: 100%;
+    height: 480px;
+}
+
+.hero-badge {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: #f6b73c;
+    color: #1d3b2f;
+    border-radius: 2rem;
+    z-index: 10;
+}
